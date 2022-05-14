@@ -1,0 +1,14 @@
+// ----------
+// Staff
+// ----------
+
+.staff-section {
+    &--role {
+        letter-spacing: 2px;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+    &--name {
+        font-family: 'Apercu', Arial, Helvetica, sans-serif;
+        letter-spacing: 2px;
+    }
+}

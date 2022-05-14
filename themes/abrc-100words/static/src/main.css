@@ -1,0 +1,264 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+h1 {
+  @apply text-3xl font-extrabold tracking-tight sm:text-4xl;
+}
+
+h1.page-title {
+  @apply text-primary uppercase text-4xl md:text-7xl font-medium;
+}
+
+h2 {
+  @apply text-black text-3xl mb-0;
+}
+
+h3 {
+  @apply text-black text-2xl font-bold mb-0;
+}
+
+p {
+  @apply text-black text-lg;
+}
+
+.article-body a {
+  @apply underline;
+}
+
+.article-body a:hover {
+  @apply text-secondary;
+}
+
+.sidebar form {
+  @apply bg-primary w-full overflow-hidden;
+}
+
+.sidebar form h2 {
+  @apply mb-2 p-4;
+}
+
+.sidebar form input:not(.wpcf7-submit),
+.sidebar form textarea {
+  @apply bg-primary border-8 border-secondary p-2 mb-0 w-full placeholder-black;
+}
+
+.sidebar form br {
+  @apply hidden;
+}
+
+.sidebar form input[type='submit'] {
+  @apply bg-primary w-full h-full text-left p-4 uppercase font-bold  text-2xl hover:cursor-pointer hover:bg-secondary hover:text-white;
+}
+
+.sidebar form textarea::placeholder,
+.sidebar form input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  @apply font-bold opacity-100 text-2xl;
+}
+
+.sidebar form textarea:-ms-input-placeholder,
+.sidebar form input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  @apply font-bold text-2xl;
+}
+
+.sidebar form textarea::-ms-input-placeholder,
+.sidebar form input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  @apply font-bold text-2xl;
+}
+
+/* WooCommerce styles */
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.single_add_to_cart_button,
+.woocommerce-page .woocommerce-message .button,
+.woocommerce-page .woocommerce-error .button,
+.woocommerce a.button {
+  @apply w-full h-full text-left p-4 uppercase font-bold  text-2xl;
+  background-color: var(--primary) !important;
+  border-radius: 0 !important;
+  color: var(--black) !important;
+}
+
+.woocommerce button.button.alt,
+.woocommerce a.button,
+.woocommerce-page .woocommerce-message .button,
+.woocommerce-page .woocommerce-error .button {
+  @apply w-auto h-auto;
+}
+
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.single_add_to_cart_button:hover,
+.woocommerce-page .woocommerce-message .button:hover,
+.woocommerce-page .woocommerce-error .button:hover,
+.woocommerce a.button:hover {
+  background-color: var(--secondary) !important;
+  color: var(--white) !important;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output,
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: var(--accent) !important;
+  background-color: var(--accent) !important;
+  color: var(--white) !important;
+}
+
+.single-product .media-content .button,
+.woocommerce-shop .media-content .button {
+  @apply hidden;
+}
+
+.woocommerce-notices-wrapper .woocommerce-message {
+  @apply bg-tertiary text-white text-xl;
+}
+
+.woocommerce-notices-wrapper .woocommerce-info,
+.woocommerce-notices-wrapper .woocommerce-error {
+  @apply bg-accent text-white text-xl;
+}
+
+.cart-empty.woocommerce-info::before,
+.woocommerce-notices-wrapper .woocommerce-info::before,
+.woocommerce-notices-wrapper .woocommerce-message::before,
+.woocommerce-notices-wrapper .woocommerce-error::before {
+  @apply text-white text-xl;
+}
+
+.woocommerce button.button:disabled,
+.woocommerce button.button:disabled[disabled] {
+  @apply hidden;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  border: 2px solid black;
+  padding: 8px;
+}
+
+.cart-empty.woocommerce-info {
+  @apply bg-tertiary text-white text-xl;
+}
+
+.woocommerce-billing-fields
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: black;
+  line-height: 1;
+  padding: 0;
+  margin-top: -8px;
+}
+
+.woocommerce-billing-fields
+  .select2-container--default
+  .select2-selection--single {
+  border: 2px solid black;
+  border-radius: 0;
+  padding: 16px 8px;
+}
+
+.woocommerce-billing-fields
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  border-color: black transparent transparent transparent;
+}
+
+.woocommerce-billing-fields
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow {
+  height: 100%;
+}
+
+.woocommerce-input-wrapper textarea::placeholder,
+.woocommerce-input-wrapper input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  @apply text-black;
+}
+
+.woocommerce-input-wrapper textarea:-ms-input-placeholder,
+.woocommerce-input-wrapper input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  @apply text-black;
+}
+
+.woocommerce-input-wrapper textarea::-ms-input-placeholder,
+.woocommerce-input-wrapper input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  @apply text-black;
+}
+
+/* Fun bug on woo pages where images are blown up */
+.header section img.h-8 {
+  @apply h-8;
+}
+
+/* Slider */
+/* .swiper-button-next:after,
+.swiper-button-prev:after {
+    @apply text-secondary;
+    font-family: FontAwesome;
+}
+
+.swiper-button-prev:after {
+    content: "\f060";
+}
+
+.swiper-button-next:after {
+    content: "\f061";
+} */
+
+.swiper-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.swiper-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: -webkit-transform 0.4s ease;
+    -moz-transition: -moz-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    -o-transition: -o-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    -webkit-transform: translatex(-100%) rotatez(0);
+    -moz-transform: translatex(-100%) rotatez(0);
+    -ms-transform: translatex(-100%) rotatez(0);
+    -o-transform: translatex(-100%) rotatez(0);
+}
+
+.swiper-slide.current {
+    -webkit-transform: translatex(0) rotatez(0);
+    -moz-transform: translatex(0) rotatez(0);
+    -ms-transform: translatex(0) rotatez(0);
+    -o-transform: translatex(0) rotatez(0);
+}
+
+.swiper-slide.current ~ .swiper-slide {
+    -webkit-transform: translatex(100%) rotatez(0);
+    -moz-transform: translatex(100%) rotatez(0);
+    -ms-transform: translatex(100%) rotatez(0);
+    -o-transform: translatex(100%) rotatez(0);
+  }
+
+.swiper-slide a:hover,
+.swiper-slide:hover {
+  cursor: url('../../assets/images/icons/TallerDeHarrington_CursorArrowMagenta.svg'),
+    auto;
+}

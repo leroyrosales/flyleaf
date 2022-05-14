@@ -1,0 +1,32 @@
+<ul class="social-accounts list-inline mt-5">
+	{% if social_media_accounts.social_accounts.facebook %}
+		<li class="list-inline-item p-2"><a href="{{ social_media_accounts.social_accounts.facebook }}" target="_blank"><svg role="img">
+			<use xlink:href="{{theme.link}}/assets/images/icons/symbol-defs.svg#ut-facebook"></use>
+		</svg></a></li>
+	{% endif %}
+	{% if social_media_accounts.social_accounts.twitter %}
+		<li class="list-inline-item p-2"><a href="{{ social_media_accounts.social_accounts.twitter }}" target="_blank"><svg role="img">
+			<use xlink:href="{{theme.link}}/assets/images/icons/symbol-defs.svg#ut-twitter"></use>
+		</svg></a></li>
+	{% endif %}
+	{% if social_media_accounts.social_accounts.instagram %}
+		<li class="list-inline-item p-2"><a href="{{ social_media_accounts.social_accounts.instagram }}" target="_blank"><svg role="img">
+			<use xlink:href="{{theme.link}}/assets/images/icons/symbol-defs.svg#ut-instagram"></use>
+		</svg></a></li>
+	{% endif %}
+	{% if social_media_accounts.social_accounts.linkedin %}
+		<li class="list-inline-item p-2"><a href="{{ social_media_accounts.social_accounts.linkedin }}" target="_blank"><svg role="img">
+			<use xlink:href="{{theme.link}}/assets/images/icons/symbol-defs.svg#ut-linkedin"></use>
+		</svg></a></li>
+	{% endif %}
+	{% if social_media_accounts.social_accounts.youtube %}
+		<li class="list-inline-item p-2"><a href="{{ social_media_accounts.social_accounts.youtube }}" target="_blank"><svg role="img">
+			<use xlink:href="{{theme.link}}/assets/images/icons/symbol-defs.svg#ut-youtube"></use>
+		</svg></a></li>
+	{% endif %}
+	{% if social_media_accounts.social_accounts.vimeo %}
+		<li class="list-inline-item p-2"><a href="{{ social_media_accounts.social_accounts.vimeo }}" target="_blank"><svg role="img">
+			<use xlink:href="{{theme.link}}/assets/images/icons/symbol-defs.svg#ut-vimeo"></use>
+		</svg></a></li>
+	{% endif %}
+</ul>

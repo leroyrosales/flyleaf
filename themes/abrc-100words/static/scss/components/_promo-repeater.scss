@@ -1,0 +1,27 @@
+// ----------
+// Promo Repeater
+// ----------
+.promo-repeater {
+  // ----------
+  // Icon Boxes
+  &--icon-box {
+    .card-body {
+      .ut-h2,
+      div {
+        color: $ut-white;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $ut-white;
+        border-radius: .3rem;
+        text-decoration: none;
+
+        div,
+        .ut-h2 {
+          color: $ut-burntorange;
+        }
+      }
+    }
+  }
+}

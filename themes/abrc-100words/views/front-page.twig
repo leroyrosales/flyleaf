@@ -1,0 +1,57 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% if hero %}
+        <section>
+
+            {# 16 x 9 ratio #}
+            <figure>
+                <picture>
+                    <source media="(min-width: 800px)" srcset="{{ hero.url | resize( 1280, 720, 'center' ) }} 1200w">
+                    <source media="(min-width: 450px)" srcset="{{ hero.url | resize( 800, 450, 'center' ) }} 600w">
+                    <source srcset="{{ hero.url | resize(  500, 281.25, 'center' ) }}">
+                    <img loading="lazy"
+                    src="{{ hero.url | resize( 500, 281.25, 'center' ) }}"
+                    alt="{{ hero.alt ?: hero.title }}">
+                </picture>
+            </figure>
+        </section>
+    {% endif %}
+
+    {% if arrangements %}
+        <!-- Slider main container -->
+        <section>
+            <h2 class="text-primary uppercase text-4xl md:text-7xl">Arrangements</h2>
+
+                {% for arrangement in arrangements %}
+                    <div class="md:grid grid-cols-4 pb-16">
+                        <div class="col-span-3">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper swiper__hero w-full h-96 xl:h-[35rem]">
+                                {% for image in arrangement.meta('gallery') %}
+                                    <!-- Slides -->
+                                    <div class="swiper-slide bg-primary h-full {% if loop.first %}current{% endif %}">
+                                        <img class="img-fluid projects--content-image mx-auto h-full object-contain" src="{{ Image(image).src | resize( 600, false )}}">
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <h3 class="font-medium mb-4">{{ arrangement.title }}</h3>
+                        </div>
+
+                        <div class="pl-4 col-span-1">
+
+                                <a href="{{ arrangement.link }}" class="block px-1 py-4 border-8 border-tertiary bg-transparent text-3xl text-center md:w-1/2 lg:w-1/3 hover:bg-tertiary hover:text-white">about this effort</a>
+
+                        </div>
+                    </div>
+
+                {% endfor %}
+
+
+        </section>
+
+    {% endif %}
+
+
+{% endblock %}

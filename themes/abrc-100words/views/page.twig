@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div>
+		<h1 class="page-title">{{ post.title }}</h1>
+	</div>
+	<div class="content-wrapper">
+		<section class="md:grid grid-cols-4 gap-3">
+			<figure class="bg-primary flex flex-wrap content-center">
+				<picture>
+					<source media="(min-width: 800px)" srcset="{{ post.thumbnail.src | resize( 800, 600, 'center' ) }} 1200w">
+					<source srcset="{{ post.thumbnail.src | resize( 600, 450, 'center' ) }}">
+					<img loading="lazy" class="hero-area--img img-fluid w-100"
+					src="{{ post.thumbnail.src | resize( 600, 450, 'center' ) }}"
+					alt="{{ post.thumbnail.alt ?: post.thumbnail.title }}">
+				</picture>
+			</figure>
+			<article class="post-type-{{post.post_type}} col-span-2" id="post-{{post.ID}}">
+				<div class="article-body">
+					{{ post.content }}
+				</div>
+			</article>
+			{% if sidebar %}
+				{% include 'sidebar.twig' %}
+			{% endif %}
+		</section>
+	</div><!-- /content-wrapper -->
+
+{% endblock %}

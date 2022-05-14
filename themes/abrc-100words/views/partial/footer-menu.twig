@@ -1,0 +1,9 @@
+{% if menu %}
+  <nav class="list-unstyled mb-3" id="{{ menu_id }}">
+  {% for item in menu %}
+    <li class="mb-2 {{ item.classes | join(' ') }}">
+      <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+  </nav>
+{% endif %}

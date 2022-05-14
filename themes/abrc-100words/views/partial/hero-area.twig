@@ -1,0 +1,26 @@
+{% if is_project_post %}
+  {# 16 x 9 ratio #}
+  <figure class="hero-area m-0 position-relative d-flex align-items-center">
+    <picture>
+        <source media="(min-width: 800px)" srcset="{{ post.thumbnail.src | resize(1280) }} 1200w">
+        <source media="(min-width: 450px)" srcset="{{ post.thumbnail.src | resize(800) }} 600w">
+        <source srcset="{{ post.thumbnail.src | resize(800) }}">
+        <img loading="lazy" class="hero-area--img img-fluid w-100"
+        src="{{ post.thumbnail.src | resize(800) }}"
+        alt="{{ post.thumbnail.alt ?: post.thumbnail.title }}">
+    </picture>
+  </figure>
+  
+{% else %}
+  {# 32 x 9 ratio #}
+  <figure class="hero-area m-0 position-relative d-flex align-items-center">
+    <picture>
+        <source media="(min-width: 800px)" srcset="{{ post.thumbnail.src | resize(1280, 460, 'center') }} 1200w">
+        <source media="(min-width: 450px)" srcset="{{ post.thumbnail.src | resize(800, 400, 'center') }} 600w">
+        <source srcset="{{ post.thumbnail.src | resize(800, 400, 'center') }}">
+        <img loading="lazy" class="hero-area--img img-fluid w-100"
+        src="{{ post.thumbnail.src | resize(800, 400, 'center') }}"
+        alt="{{ post.thumbnail.alt ?: post.thumbnail.title }}">
+    </picture>
+  </figure>
+{% endif %}

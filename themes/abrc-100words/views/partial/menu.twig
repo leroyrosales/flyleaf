@@ -1,0 +1,32 @@
+{% if menu %}
+
+	<ul class="hidden sm:flex">
+	{% for item in menu %}
+		<li class="nav-item flex-fill mx-3 my-2 {% if item.children %}dropdown{% endif %} {{ item.classes | join(' ') }}">
+			<a class="text-xl uppercase border-8 border-transparent bg-transparent font-bold text-black px-8 py-4 hover:bg-white hover:text-tertiary hover:border-secondary {% if item.children %}dropdown-toggle{% endif %}" target="{{ item.target }}" href="{{ item.link }}" {% if item.children %}id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"{% endif %}>{{ item.title }}</a>
+			{% if item.children %}
+				<ul class="dropdown-menu text-center px-5 py-4" aria-labelledby="navbarDropdown">
+					{% for child in item.children %}
+						<li class="m-0 pb-3"><a class="dropdown-item d-block text-white" target="{{ child.target }}" href="{{ child.link }}">{{ child.title }}</a></li>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</li>
+	{% endfor %}
+	</ul>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+	  {% for item in menu %}
+	  	<a href="{{ item.link }}" target="{{ item.target }}" class="block text-xl uppercase border-8 border-transparent bg-transparent font-bold text-black px-8 py-4 hover:bg-white hover:text-tertiary hover:border-secondary">{{ item.title }}</a>
+		{% endfor %}
+    </div>
+  </div>
+
+{% endif %}
+
+
+
+

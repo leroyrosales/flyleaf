@@ -1,0 +1,17 @@
+{
+    "name": "leroyrosales/harrington",
+    "description": "wp theme using twig",
+    "require": {
+        "timber/timber": "^1.18"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "authors": [
+        {
+            "name": "Leroy Rosales",
+            "email": "leroyrosales@gmail.com"
+        }
+    ]
+}

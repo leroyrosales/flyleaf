@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+	<article class="article-content" id="post-{{ post.ID }}">
+		<div class="container py-5">
+			<section class="row">
+				<header class="col-12 col-md-12 pb-3">
+					<h1 class="article-content--headline">{{ post.title }}</h1>
+					{% if post.meta('subtitle') %}
+						<h2><em>{{post.meta('subtitle')}}</em></h2>
+					{% endif %}
+				</header>
+				<div class="col-12 col-md-8 article-content--content">
+					{{post.content}}
+				</div>
+				<aside class="col-12 col-md-4">
+					{{ sidebar }}
+				</aside>
+			</section>
+		</div>
+	</article>
+
+	<div class="container pb-5">
+        <footer class="row pt-3 pb-5">
+            <div class="col-12 text-center">
+                <a class="featured-posts--cta featured-link-cta h4 pt-5 pb-3 text-uppercase text-decoration-none" href="{{ page_for_posts_link }}">Back to blog</a>
+            </div>
+        </footer>
+	</div>
+
+{% endblock %}

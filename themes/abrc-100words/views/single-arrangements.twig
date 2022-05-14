@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div>
+		<h1 class="page-title">{{ post.title }}</h1>
+	</div>
+    <section>
+        <div class="flex flex-col-reverse md:grid md:grid-cols-4 md:gap-2">
+            {% if gallery %}
+                <div class="grid grid-cols-2 col-span-3 gap-2">
+                {% for image in gallery %}
+                    <figure class="bg-primary mb-4">
+                        {% if image.url.url %}
+                        <a href="{{ image.url.url }}" target="{{ image.url.target }}">
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="{{ Image(image).src | resize(800, false ) }} 1200w">
+                            <source media="(min-width: 450px)" srcset="{{ Image(image) | resize(600, false )}} 600w">
+                            <source srcset="{{ Image(image).src | resize(400, false ) }}">
+                            <img loading="lazy" class="px-8 md:h-full mx-auto max-h-96"
+                            src="{{ Image(image).src | resize(400, false ) }}"
+                            alt="{{ image.image.alt ?: image.image.title }}">
+                        </picture>
+                        </a>
+                        {% else %}
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="{{ Image(image).src | resize(800, false ) }} 1200w">
+                            <source media="(min-width: 450px)" srcset="{{ Image(image) | resize(600, false )}} 600w">
+                            <source srcset="{{ Image(image).src | resize(400, false ) }}">
+                            <img loading="lazy" class="px-8 md:h-full mx-auto max-h-96"
+                            src="{{ Image(image).src | resize(400, false ) }}"
+                            alt="{{ image.image.alt ?: image.image.title }}">
+                        </picture>
+                        {% endif %}
+                        {% if image.image.caption %}
+                        <div class="bg-white">
+                            {{ image.image.caption }}
+                        </div>
+                        {% endif %}
+                    </figure>
+                {% endfor %}
+                </div>
+            {% endif %}
+            <div>
+                {{ post.content }}
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

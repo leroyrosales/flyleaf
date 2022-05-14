@@ -1,0 +1,9 @@
+{% if menu %}
+  <nav class="list-unstyled list-inline mb-3" id="{{ menu_id }}">
+  {% for item in menu|slice(0,3) %}
+    <li class="list-inline-item text-decoration-none {% if not loop.last %}border-secondary border-end pe-2{% endif %} {{ item.classes | join(' ') }}">
+      <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
+    </li>
+  {% endfor %}
+  </nav>
+{% endif %}

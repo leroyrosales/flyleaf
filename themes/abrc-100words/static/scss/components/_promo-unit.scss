@@ -1,0 +1,19 @@
+// Promo Units
+
+
+[class^="promo-unit--"],
+[class*=" promo-unit--"] {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.promo-unit {
+    &--headline {
+        color: #fff;
+    }
+    &--cta {
+        color: #fff;
+    }
+}
+

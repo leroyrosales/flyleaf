@@ -1,0 +1,22 @@
+{% extends "tease.twig" %}
+
+{% block content %}
+	<article class="col-12 col-4 pb-5 justify-content-between">
+		{% if post.thumbnail.src %}
+			<div class="col-12 mb-3">
+				<picture>
+					<source media="(min-width: 800px)" srcset="{{ post.thumbnail.src | resize(600, 600, 'center') }} 1200w">
+					<source media="(min-width: 450px)" srcset="{{ post.thumbnail.src | resize(400, 400, 'center') }} 600w">
+					<source srcset="{{ post.thumbnail.src | resize(300, 300, 'center') }}">
+					<img loading="lazy" class="hero-area--img img-fluid w-100" src="{{ post.thumbnail.src | resize(400, 400, 'center') }}" alt="{{ post.thumbnail.alt ?: post.thumbnail.title }}">
+				</picture>
+			</div>
+		{% endif %}
+		<div class="blog-tease col-12">
+			<header class="mb-4">
+				<h2 class="h4"><a class="text-decoration-none" href="{{post.link}}">{{ post.title }}</a></h2>
+			</header>
+			<a class="text-decoration-none text-uppercase mt-auto" href="{{ post.link }}"><strong>Read this post</strong></a>
+		</div>
+	</article>
+{% endblock %}
