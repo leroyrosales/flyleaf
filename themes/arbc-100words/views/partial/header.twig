@@ -2,16 +2,8 @@
 <header class="header bg-primary sm:flex sm:justify-between relative">
 
   {% block header %}
-    <section class="py-2">
-          {% if site_logo %}
-            <a class="hdr-logo-link" href="{{site.url}}" rel="home"><img class="img-fluid" src="{{ site_logo }}" alt="{{ site.name }}"></a>
-          {% else %}
-            <h1 class="sr-only">{{ site.name |  replace({ ' ' : '' }) }}</h1>
-            <a href="{{ site.url }}" rel="home"><img class="hidden md:block h-8 w-auto max-w-xl" src="{{ site.theme.link }}/assets/images/logos/TallerDeHarrington_WordMark_Blue.svg" alt="Taller de Harrington"/>
-            <img class="block md:hidden h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/TallerDeHarrington_MonogramB.svg" alt="H logo"></a>
-          {% endif %}
-    </section>
-
+    <section class="container mx-auto py-2 flex justify-between content-center">
+        <a href="{{ site.url }}" rel="home">Austin Ridge Bible Church</a>
         {% if mobile_menu %}
         <div class="d-block d-lg-none col text-end">
           <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobileMenu" aria-controls="navbarMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,13 +11,13 @@
           </button>
         </div>
         {% endif %}
-    <nav id="nav-main" class="navbar" role="navigation">
-      <div class="">
-
+        <nav id="nav-main" class="navbar" role="navigation">
+          <div class="">
             {% include "partial/menu.twig" with { 'menu': primary_menu.get_items } %}
+          </div>
+        </nav><!-- #nav -->
+    </section>
 
-      </div>
-    </nav><!-- #nav -->
 
       <div class="absolute top-0 right-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->

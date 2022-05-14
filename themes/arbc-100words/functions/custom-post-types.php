@@ -26,7 +26,7 @@ if ( ! function_exists( 'fix_no_editor_on_posts_page' ) ) {
 
 
 // Projects
-function harrington_arrangements_cpt() {
+function abrc_faiths_cpt() {
 
 	// CUSTOM POST TYPE
 	register_post_type( 'arrangements',
@@ -61,7 +61,7 @@ function harrington_arrangements_cpt() {
 	);
 
 }
-add_action( 'init', 'harrington_arrangements_cpt' );
+add_action( 'init', 'abrc_faiths_cpt' );
 
 // add_action( 'init', function () {
 
