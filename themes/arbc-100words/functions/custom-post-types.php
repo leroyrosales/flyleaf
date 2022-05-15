@@ -8,64 +8,65 @@
  */
 
 if ( ! function_exists( 'fix_no_editor_on_posts_page' ) ) {
-	/**
-	 * Add the wp-editor back into WordPress after it was removed in 4.2.2.
-	 *
-	 * @param $post
-	 * @return void
-	 */
-	function fix_no_editor_on_posts_page( $post ) {
-		if ( get_option( 'page_for_posts' ) !== $post->ID )
-			return;
+    /**
+     * Add the wp-editor back into WordPress after it was removed in 4.2.2.
+     *
+     * @param $post
+     * @return void
+     */
+    function fix_no_editor_on_posts_page( $post ) {
+        if ( get_option( 'page_for_posts' ) !== $post->ID )
+            return;
 
-		remove_action( 'edit_form_after_title', '_wp_posts_page_notice' );
-		add_post_type_support( 'page', 'editor' );
-	}
-	add_action( 'edit_form_after_title', 'fix_no_editor_on_posts_page', 0 );
+        remove_action( 'edit_form_after_title', '_wp_posts_page_notice' );
+        add_post_type_support( 'page', 'editor' );
+    }
+    add_action( 'edit_form_after_title', 'fix_no_editor_on_posts_page', 0 );
 }
 
 
 // Projects
-function abrc_faiths_cpt() {
+function arbc_faiths_cpt() {
 
-	// CUSTOM POST TYPE
-	register_post_type( 'arrangements',
-		array(
-			'labels' => array(
-				'name' => 'Arrangements',
-				'singular_name' => 'Arrangement',
-				'add_new_item' => 'Add New Arrangement',
-				'all_items' => 'All Arrangements',
-				'edit_item' => 'Edit Arrangement',
-				'new_item' => 'New Arrangement',
-				'view_item' => 'View Arrangement',
-				'search_items' => 'Search Arrangements',
-				'not_found' => 'No Arrangements found',
-				'not_found_in_trash' => 'No Arrangements found in Trash',
-			),
-			'rewrite' => true,
-			'hierarchical' => false,
-			'public' => true,
-			'publicly_queryable' => true,
-			'show_ui' => true,
-			'menu_position' => 15,
-			'menu_icon' => 'dashicons-art',  // https://developer.wordpress.org/resource/dashicons
-			// 'taxonomies' => ['post_tag'],
-			'show_in_nav_menus' => true,
-			'supports' => array(
-				'title',
-				'editor',
-				'thumbnail'
-			)
-		)
-	);
+    // CUSTOM POST TYPE
+    register_post_type( 
+        'story',
+        array(
+            'labels' => array(
+                'name' => 'Stories',
+                'singular_name' => 'Story',
+                'add_new_item' => 'Add New Story',
+                'all_items' => 'All Stories',
+                'edit_item' => 'Edit Story',
+                'new_item' => 'New Story',
+                'view_item' => 'View Story',
+                'search_items' => 'Search Stories',
+                'not_found' => 'No Stories found',
+                'not_found_in_trash' => 'No Stories found in Trash',
+            ),
+            'rewrite' => true,
+            'hierarchical' => false,
+            'public' => true,
+            'publicly_queryable' => true,
+            'show_ui' => true,
+            'menu_position' => 15,
+            'menu_icon' => 'dashicons-edit',  // https://developer.wordpress.org/resource/dashicons
+            'taxonomies' => array('category'),
+            'show_in_nav_menus' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                // 'thumbnail'
+            )
+        )
+    );
 
 }
-add_action( 'init', 'abrc_faiths_cpt' );
+add_action( 'init', 'arbc_faiths_cpt' );
 
 // add_action( 'init', function () {
 
-	// Slides
+    // Slides
 
 
 // add_action( 'init', function () {
