@@ -187,6 +187,7 @@ require_once( __DIR__ . '/functions/customizer.php' );
 require_once( __DIR__ . '/functions/custom-roles.php' );
 require_once( __DIR__ . '/functions/disable-comments.php' );
 require_once( __DIR__ . '/functions/enqueue.php' );
+require_once( __DIR__ . '/functions/gravity-forms.php' );
 require_once( __DIR__ . '/functions/taxonomy-functions.php' );
 require_once( __DIR__ . '/functions/optimize-wp.php' );
 require_once( __DIR__ . '/functions/projects-options.php' );
