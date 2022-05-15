@@ -13,18 +13,9 @@
  * @since   Timber 0.1
  */
 
-$context          = Timber::context();
-$context['posts'] = new Timber\PostQuery();
+$context = Timber::context();
 
-// Get hero content
-$context['hero'] = get_field( 'hero' );
-
-$args = array(
-	'posts_per_page' => -1,
-	'post_type' => 'arrangements',
-);
-
-$context['arrangements'] = new Timber\PostQuery( $args );
-
+$timber_post     = new Timber\Post();
+$context['post'] = $timber_post;
 
 Timber::render( 'front-page.twig', $context );

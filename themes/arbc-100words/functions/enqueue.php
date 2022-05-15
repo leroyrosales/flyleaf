@@ -35,15 +35,9 @@ add_action('admin_head', function() {
 
 // Swiper Enqueues
 
-function swiper_slider_scripts() {
+function abrc_js_script() {
 
-  if(is_front_page()){
-    wp_localize_script('harrington-slider', 'swiper_settings', array(
-      'time' => get_theme_mod( 'slider_timer_settings', '5000' )
-    ));
-  }
-
-  wp_enqueue_script( 'harrington-scripts', get_template_directory_uri() . '/assets/dist/main.bundle.js', array(), false, true );
+  wp_enqueue_script( 'arbc-scripts', get_template_directory_uri() . '/assets/dist/main.bundle.js', array(), false, true );
 
 }
-add_action( 'wp_enqueue_scripts', 'swiper_slider_scripts' );
+add_action( 'wp_enqueue_scripts', 'abrc_js_script' );
