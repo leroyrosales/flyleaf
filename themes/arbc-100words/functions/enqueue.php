@@ -3,11 +3,11 @@
 // Theme enqueues and dequeues
 
 // Dequeue core jquery
-add_action( 'wp_enqueue_scripts', function(){
-  if (is_admin()) return; // don't dequeue on the backend
-  wp_dequeue_script( 'jquery' );
-  wp_deregister_script( 'jquery' );
-});
+// add_action( 'wp_enqueue_scripts', function(){
+//   if (is_admin()) return; // don't dequeue on the backend
+//   wp_dequeue_script( 'jquery' );
+//   wp_deregister_script( 'jquery' );
+// });
 
 // Add theme styles to section buttons
 add_action('admin_head', function() {
