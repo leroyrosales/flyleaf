@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-    alert('hello world');
     $("[class*='count[']").each(function() {
         var elClass = $(this).attr('class');
         var maxWords = 0;
