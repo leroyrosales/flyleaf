@@ -2,8 +2,26 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+/*
+font-family: 'DM Serif Display', serif;
+font-family: 'DM Serif Text', serif;
+font-family: 'Inter', sans-serif;
+*/
+
+body {
+  @apply text-black;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'DM Serif Display', serif;
+}
+
 h1 {
-  @apply text-3xl font-extrabold tracking-tight sm:text-4xl;
+  @apply text-9xl;
 }
 
 h1.page-title {
@@ -56,9 +74,15 @@ form .ginput_container_textarea textarea {
   @apply bg-transparent w-full;
 }
 
+form #field_1_1 label,
+form #field_3_1 label {
+  @apply hidden;
+}
+
 fieldset#field_1_2 .gfield_label,
 fieldset#field_3_2 .gfield_label {
   float: left;
+  font-family: 'DM Serif Text', serif;
 }
 
 form .ginput_container.ginput_container_radio {
@@ -101,6 +125,7 @@ form .gchoice label {
 
 form .gfield_label {
   @apply text-2xl pb-4;
+  font-family: 'DM Serif Text', serif;
 }
 
 form .gfield_description {
