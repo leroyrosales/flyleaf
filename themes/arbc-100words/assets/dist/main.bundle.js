@@ -16,7 +16,7 @@
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://harrington-theme/./static/src/main.css?");
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://arbc-100words/./static/src/main.css?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./static/src/main.css\");\n\n\n\"use strict\";\n\nconst mobileMenu = document.getElementById('mobile-menu');\nconst openMobileMenu = document.getElementById('open-mobile-menu');\nconst closedNavIcon = document.getElementById('closed-nav-icon');\nconst openNavIcon = document.getElementById('open-nav-icon');\n\nopenMobileMenu.addEventListener( 'click', () => {\n  if( mobileMenu.classList.contains( 'hidden' ) && (window.innerWidth < 639) ) {\n    mobileMenu.classList.remove( 'hidden' );\n    closedNavIcon.classList.add('hidden');\n    openNavIcon.classList.remove('hidden');\n  } else {\n    mobileMenu.classList.add( 'hidden' );\n    closedNavIcon.classList.remove('hidden');\n    openNavIcon.classList.add('hidden');\n  }\n});\n\nwindow.addEventListener('resize', () => {\n  if ( window.innerWidth > 639 ) {\n    mobileMenu.classList.add( 'hidden' );\n  }\n});\n\n\n\n\n\n\n//# sourceURL=webpack://harrington-theme/./static/src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _main_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./main.css */ \"./static/src/main.css\");\n\n\n\"use strict\";\n\nconst mobileMenu = document.getElementById('mobile-menu');\nconst openMobileMenu = document.getElementById('open-mobile-menu');\nconst closedNavIcon = document.getElementById('closed-nav-icon');\nconst openNavIcon = document.getElementById('open-nav-icon');\n\nopenMobileMenu.addEventListener( 'click', () => {\n  if( mobileMenu.classList.contains( 'hidden' ) && (window.innerWidth < 639) ) {\n    mobileMenu.classList.remove( 'hidden' );\n    closedNavIcon.classList.add('hidden');\n    openNavIcon.classList.remove('hidden');\n  } else {\n    mobileMenu.classList.add( 'hidden' );\n    closedNavIcon.classList.remove('hidden');\n    openNavIcon.classList.add('hidden');\n  }\n});\n\nwindow.addEventListener('resize', () => {\n  if ( window.innerWidth > 639 ) {\n    mobileMenu.classList.add( 'hidden' );\n  }\n});\n\n\n\n\n\n\n//# sourceURL=webpack://arbc-100words/./static/src/index.js?");
 
 /***/ })
 
@@ -34,7 +34,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -48,14 +48,14 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
@@ -67,14 +67,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mai
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
-/******/
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
 /******/ 	var __webpack_exports__ = __webpack_require__("./static/src/index.js");
-/******/
+/******/ 	
 /******/ })()
 ;
-

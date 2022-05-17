@@ -2,8 +2,8 @@
 <header class="header bg-primary sm:flex sm:justify-between relative">
 
   {% block header %}
-    <section class="container mx-auto py-2 flex justify-between content-center">
-        <a href="{{ site.url }}" rel="home">Austin Ridge Bible Church</a>
+    <section class="container mx-auto py-2 flex justify-between">
+        <a class="text-black self-center uppercase" href="{{ site.url }}" rel="home">Austin Ridge Bible Church</a>
         {% if mobile_menu %}
         <div class="d-block d-lg-none col text-end">
           <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobileMenu" aria-controls="navbarMobileMenu" aria-expanded="false" aria-label="Toggle navigation">

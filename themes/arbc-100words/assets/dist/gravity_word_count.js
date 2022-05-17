@@ -38,6 +38,6 @@ jQuery(document).ready(function($) {
                 $(this).siblings('.word-count-wrapper').removeClass('error');
             }
 
-        }).after('<span class="word-count-wrapper">Total Word Count: <span class="word-count">0</span></span>');
+        }).after('<span class="word-count-wrapper">(110 word limit) <span class="word-count">0</span> words</span>');
     });
 });

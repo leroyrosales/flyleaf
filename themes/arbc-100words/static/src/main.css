@@ -34,8 +34,28 @@ a {
   @apply text-secondary;
 }
 
-.sidebar form {
-  @apply bg-primary w-full overflow-hidden;
+form {
+  @apply bg-accent w-screen p-24;
+  max-width: 960px;
+}
+
+form input[type=radio] {
+  border: none;
+  background-color: #FBFAF3;
+  padding: 0.5em;
+  -webkit-appearance: none;
+}
+
+form input[type=radio]:checked {
+  background-color: #3F3E3D;
+}
+
+form input[type=radio]:focus {
+  outline-color: transparent;
+}
+
+.word-count-wrapper {
+  @apply italic text-sm;
 }
 
 .sidebar form h2 {
