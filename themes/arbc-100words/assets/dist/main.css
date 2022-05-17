@@ -832,6 +832,8 @@ a {
 }
 
 .gform_title {
+  position: relative;
+  z-index: 10;
   padding-left: 6rem;
   font-size: 4.5rem;
   font-weight: 700;
@@ -839,6 +841,7 @@ a {
 }
 
 form {
+  position: relative;
   width: 100vw;
   --tw-bg-opacity: 1;
   background-color: rgb(245 225 153 / var(--tw-bg-opacity));
@@ -859,6 +862,13 @@ form .ginput_container_textarea textarea {
   background-color: transparent;
 }
 
+fieldset#field_1_2 .gfield_label {
+  float: left;
+}
+
+form .ginput_container.ginput_container_radio {
+  clear: left;
+}
 
 form input[type=radio] {
   border: none;
@@ -892,6 +902,14 @@ form .gfield_label {
   line-height: 2rem;
 }
 
+form .gfield_description {
+  display: inline-block;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: italic;
+}
+
 form .gfield_radio {
   display: flex;
   flex-direction: row;
@@ -906,10 +924,21 @@ form .gfield_radio .gchoice {
   padding-bottom: 16px;
 }
 
+form #field_1_4, form #field_1_5 {
+  display: inline-block;
+}
+
+form #field_1_5 .gfield_label, form .gform_validation_container {
+  display: none;
+}
+
 .gform_footer input#gform_submit_button_1 {
-  background: white;
   position: absolute;
-  right: 0;
+  right: 0px;
+  bottom: 1.5rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 250 243 / var(--tw-bg-opacity));
+  padding: 1.5rem;
 }
 
 .word-count-wrapper {

@@ -39,12 +39,12 @@ a {
 }
 
 .gform_title {
-  @apply text-7xl font-bold pl-24;
+  @apply text-7xl font-bold pl-24 relative z-10;
   line-height: .25;
 }
 
 form {
-  @apply bg-accent w-screen p-24;
+  @apply bg-accent w-screen p-24 relative;
   max-width: 960px;
 }
 
@@ -56,6 +56,13 @@ form .ginput_container_textarea textarea {
   @apply bg-transparent w-full;
 }
 
+fieldset#field_1_2 .gfield_label {
+  float: left;
+}
+
+form .ginput_container.ginput_container_radio {
+  clear: left;
+}
 
 form input[type=radio] {
   border: none;
@@ -85,6 +92,10 @@ form .gfield_label {
   @apply text-2xl pb-4;
 }
 
+form .gfield_description {
+  @apply text-base inline-block italic pl-2;
+}
+
 form .gfield_radio {
   display: flex;
   flex-direction: row;
@@ -99,10 +110,18 @@ form .gfield_radio .gchoice {
   padding-bottom: 16px;
 }
 
+form #field_1_4,
+form #field_1_5 {
+  @apply inline-block;
+}
+
+form #field_1_5 .gfield_label,
+form .gform_validation_container {
+  @apply hidden;
+}
+
 .gform_footer input#gform_submit_button_1 {
-  background: white;
-  position: absolute;
-  right: 0;
+  @apply bg-white absolute right-0 bottom-6 p-6;
 }
 
 .word-count-wrapper {
