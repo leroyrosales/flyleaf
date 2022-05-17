@@ -11,5 +11,12 @@
         </article>
     </section>
 
+    {% if form %}
+        <section>
+            <div class="container mx-auto flex justify-center">
+                {{ form }}
+            </div>
+        </section>
+    {% endif %}
 
 {% endblock %}

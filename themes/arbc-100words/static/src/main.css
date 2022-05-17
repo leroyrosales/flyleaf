@@ -65,7 +65,8 @@ form .ginput_container.ginput_container_radio {
   clear: left;
 }
 
-form input[type=radio] {
+form input[type=radio],
+form input[type=checkbox] {
   border: none;
   background-color: #FBFAF3;
   padding: 0.5em;
@@ -73,12 +74,21 @@ form input[type=radio] {
   margin-right: 8px;
 }
 
-form input[type=radio]:checked {
+form input[type=radio]:checked,
+form input[type=checkbox]:checked {
   background-color: #3F3E3D;
 }
 
-form input[type=radio]:focus {
+form input[type=radio]:focus,
+form input[type=checkbox]:focus {
   outline-color: transparent;
+}
+
+form .gfield_checkbox .gchoice {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
 }
 
 form fieldset {
@@ -112,16 +122,26 @@ form .gfield_radio .gchoice {
 }
 
 form #field_1_4,
+form #field_3_4 {
+  @apply inline-block w-full;
+  max-width: 400px;
+}
+
 form #field_1_5,
-form #field_3_4,
 form #field_3_5 {
-  @apply inline-block;
+  @apply ml-4 inline-block;
 }
 
 form #field_1_5 .gfield_label,
 form #field_3_5 .gfield_label,
 form .gform_validation_container {
   @apply hidden;
+}
+
+form .ginput_container_text input[type=text],
+form .ginput_container_email input[type=email] {
+  @apply w-full p-2;
+  max-width: 400px;
 }
 
 form #field_submit {
@@ -139,7 +159,7 @@ body #gform_wrapper_1 #field_submit span:after,
 }
 
 body #gform_wrapper_1 #field_submit INPUT[type=submit] {
-  @apply pr-4;
+  @apply pr-4 text-4xl;
 }
 
 .word-count-wrapper {

@@ -17,11 +17,13 @@ function els_load_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'els_load_scripts' );
 
-// ADDS A SPAN TAG AFTER THE GRAVITY FORMS BUTTON
-// aria-hidden is added for accessibility (hides the icon from screen readers)
 add_filter( 'gform_submit_button', 'arbc_add_span_tags', 10, 2 );
 function arbc_add_span_tags ( $button, $form ) {
 
 	return $button .= "<span aria-hidden='true'></span>";
 
 }
+
+add_filter('acf/format_value/type=text', 'do_shortcode');
+
+

@@ -507,6 +507,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.mt-24 {
+  margin-top: 6rem;
+}
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -871,7 +874,8 @@ form .ginput_container.ginput_container_radio {
   clear: left;
 }
 
-form input[type=radio] {
+form input[type=radio],
+form input[type=checkbox] {
   border: none;
   background-color: #FBFAF3;
   padding: 0.5em;
@@ -879,12 +883,21 @@ form input[type=radio] {
   margin-right: 8px;
 }
 
-form input[type=radio]:checked {
+form input[type=radio]:checked,
+form input[type=checkbox]:checked {
   background-color: #3F3E3D;
 }
 
-form input[type=radio]:focus {
+form input[type=radio]:focus,
+form input[type=checkbox]:focus {
   outline-color: transparent;
+}
+
+form .gfield_checkbox .gchoice {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
 }
 
 form fieldset {
@@ -925,12 +938,25 @@ form .gfield_radio .gchoice {
   padding-bottom: 16px;
 }
 
-form #field_1_4, form #field_1_5, form #field_3_4, form #field_3_5 {
+form #field_1_4, form #field_3_4 {
+  display: inline-block;
+  width: 100%;
+  max-width: 400px;
+}
+
+form #field_1_5, form #field_3_5 {
+  margin-left: 1rem;
   display: inline-block;
 }
 
 form #field_1_5 .gfield_label, form #field_3_5 .gfield_label, form .gform_validation_container {
   display: none;
+}
+
+form .ginput_container_text input[type=text], form .ginput_container_email input[type=email] {
+  width: 100%;
+  padding: 0.5rem;
+  max-width: 400px;
 }
 
 form #field_submit {
@@ -967,6 +993,8 @@ body #gform_wrapper_1 #field_submit span:after, .gform_wrapper form .gfield inpu
 
 body #gform_wrapper_1 #field_submit INPUT[type=submit] {
   padding-right: 1rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .word-count-wrapper {

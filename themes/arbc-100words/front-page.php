@@ -18,4 +18,7 @@ $context = Timber::context();
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
+// Get all content fields
+$context['form'] = get_field( 'form' );
+
 Timber::render( 'front-page.twig', $context );
