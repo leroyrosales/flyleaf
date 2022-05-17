@@ -56,7 +56,8 @@ form .ginput_container_textarea textarea {
   @apply bg-transparent w-full;
 }
 
-fieldset#field_1_2 .gfield_label {
+fieldset#field_1_2 .gfield_label,
+fieldset#field_3_2 .gfield_label {
   float: left;
 }
 
@@ -111,11 +112,14 @@ form .gfield_radio .gchoice {
 }
 
 form #field_1_4,
-form #field_1_5 {
+form #field_1_5,
+form #field_3_4,
+form #field_3_5 {
   @apply inline-block;
 }
 
 form #field_1_5 .gfield_label,
+form #field_3_5 .gfield_label,
 form .gform_validation_container {
   @apply hidden;
 }
