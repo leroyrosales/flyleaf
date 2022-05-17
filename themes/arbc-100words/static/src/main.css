@@ -124,7 +124,8 @@ form .gform_validation_container {
   @apply hidden;
 }
 
-.gform_footer input#gform_submit_button_1 {
+.gform_footer input#gform_submit_button_1,
+.gform_footer input#gform_submit_button_3 {
   @apply bg-white absolute right-0 bottom-6 p-6;
 }
 
