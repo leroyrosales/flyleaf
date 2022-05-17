@@ -678,6 +678,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pt-48 {
+  padding-top: 12rem;
+}
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -824,6 +827,17 @@ a {
   color: rgb(234 233 239 / var(--tw-text-opacity));
 }
 
+.gform_wrapper {
+  padding-top: 9rem;
+}
+
+.gform_title {
+  padding-left: 6rem;
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: .25;
+}
+
 form {
   width: 100vw;
   --tw-bg-opacity: 1;
@@ -832,11 +846,26 @@ form {
   max-width: 960px;
 }
 
+form .ginput_container_textarea {
+  margin-bottom: 1rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 250 243 / var(--tw-bg-opacity));
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+form .ginput_container_textarea textarea {
+  width: 100%;
+  background-color: transparent;
+}
+
+
 form input[type=radio] {
   border: none;
   background-color: #FBFAF3;
   padding: 0.5em;
   -webkit-appearance: none;
+  margin-right: 8px;
 }
 
 form input[type=radio]:checked {
@@ -847,107 +876,46 @@ form input[type=radio]:focus {
   outline-color: transparent;
 }
 
+form fieldset {
+  padding-bottom: 3rem;
+}
+
+form .gchoice label {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-style: italic;
+}
+
+form .gfield_label {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+form .gfield_radio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+form .gfield_radio .gchoice {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  padding-bottom: 16px;
+}
+
+.gform_footer input#gform_submit_button_1 {
+  background: white;
+  position: absolute;
+  right: 0;
+}
+
 .word-count-wrapper {
   font-size: 0.875rem;
   line-height: 1.25rem;
   font-style: italic;
-}
-
-.sidebar form h2 {
-  margin-bottom: 0.5rem;
-  padding: 1rem;
-}
-
-.sidebar form input:not(.wpcf7-submit), .sidebar form textarea {
-  margin-bottom: 0px;
-  width: 100%;
-  border-width: 8px;
-  --tw-border-opacity: 1;
-  border-color: rgb(234 233 239 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(228 237 217 / var(--tw-bg-opacity));
-  padding: 0.5rem;
-}
-
-.sidebar form input:not(.wpcf7-submit)::-moz-placeholder, .sidebar form textarea::-moz-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(63 62 61 / var(--tw-placeholder-opacity));
-}
-
-.sidebar form input:not(.wpcf7-submit):-ms-input-placeholder, .sidebar form textarea:-ms-input-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(63 62 61 / var(--tw-placeholder-opacity));
-}
-
-.sidebar form input:not(.wpcf7-submit)::placeholder, .sidebar form textarea::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(63 62 61 / var(--tw-placeholder-opacity));
-}
-
-.sidebar form br {
-  display: none;
-}
-
-.sidebar form input[type='submit'] {
-  height: 100%;
-  width: 100%;
-  --tw-bg-opacity: 1;
-  background-color: rgb(228 237 217 / var(--tw-bg-opacity));
-  padding: 1rem;
-  text-align: left;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.sidebar form input[type='submit']:hover {
-  cursor: pointer;
-  --tw-bg-opacity: 1;
-  background-color: rgb(234 233 239 / var(--tw-bg-opacity));
-  --tw-text-opacity: 1;
-  color: rgb(251 250 243 / var(--tw-text-opacity));
-}
-
-.sidebar form textarea::-moz-placeholder, .sidebar form input::-moz-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  opacity: 1;
-}
-
-.sidebar form textarea:-ms-input-placeholder, .sidebar form input:-ms-input-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  opacity: 1;
-}
-
-.sidebar form textarea::placeholder,
-.sidebar form input::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  opacity: 1;
-}
-
-.sidebar form textarea:-ms-input-placeholder,
-.sidebar form input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-}
-
-.sidebar form textarea::-ms-input-placeholder,
-.sidebar form input::-ms-input-placeholder {
-  /* Microsoft Edge */
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
 }
 
 .hover\:border-secondary:hover {

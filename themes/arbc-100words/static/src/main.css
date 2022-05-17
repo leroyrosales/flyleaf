@@ -34,16 +34,35 @@ a {
   @apply text-secondary;
 }
 
+.gform_wrapper {
+  @apply pt-36;
+}
+
+.gform_title {
+  @apply text-7xl font-bold pl-24;
+  line-height: .25;
+}
+
 form {
   @apply bg-accent w-screen p-24;
   max-width: 960px;
 }
+
+form .ginput_container_textarea {
+  @apply bg-white p-4 pb-8 mb-4;
+}
+
+form .ginput_container_textarea textarea {
+  @apply bg-transparent w-full;
+}
+
 
 form input[type=radio] {
   border: none;
   background-color: #FBFAF3;
   padding: 0.5em;
   -webkit-appearance: none;
+  margin-right: 8px;
 }
 
 form input[type=radio]:checked {
@@ -54,41 +73,38 @@ form input[type=radio]:focus {
   outline-color: transparent;
 }
 
+form fieldset {
+  @apply pb-12;
+}
+
+form .gchoice label {
+  @apply italic text-base;
+}
+
+form .gfield_label {
+  @apply text-2xl pb-4;
+}
+
+form .gfield_radio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+form .gfield_radio .gchoice {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  padding-right: 8px;
+  padding-bottom: 16px;
+}
+
+.gform_footer input#gform_submit_button_1 {
+  background: white;
+  position: absolute;
+  right: 0;
+}
+
 .word-count-wrapper {
   @apply italic text-sm;
-}
-
-.sidebar form h2 {
-  @apply mb-2 p-4;
-}
-
-.sidebar form input:not(.wpcf7-submit),
-.sidebar form textarea {
-  @apply bg-primary border-8 border-secondary p-2 mb-0 w-full placeholder-black;
-}
-
-.sidebar form br {
-  @apply hidden;
-}
-
-.sidebar form input[type='submit'] {
-  @apply bg-primary w-full h-full text-left p-4 uppercase font-bold  text-2xl hover:cursor-pointer hover:bg-secondary hover:text-white;
-}
-
-.sidebar form textarea::placeholder,
-.sidebar form input::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  @apply font-bold opacity-100 text-2xl;
-}
-
-.sidebar form textarea:-ms-input-placeholder,
-.sidebar form input:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  @apply font-bold text-2xl;
-}
-
-.sidebar form textarea::-ms-input-placeholder,
-.sidebar form input::-ms-input-placeholder {
-  /* Microsoft Edge */
-  @apply font-bold text-2xl;
 }

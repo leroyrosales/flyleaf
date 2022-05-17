@@ -8,14 +8,14 @@
 	<body class="{{body_class}}" data-template="base.twig">
 		{% include 'partial/header.twig' %}
 
-		<section id="content" role="main" class="content-wrapper">
+		<main id="content" role="main" class="content-wrapper">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
-			<div class="wrapper {{sidebar_class}}">
+
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
-			</div>
-		</section>
+
+		</main>
 
 		{% block footer %}
 			{% include 'partial/js-files.twig' %}
