@@ -993,7 +993,7 @@ form #field_submit:hover {
   color: rgb(251 250 243 / var(--tw-text-opacity));
 }
 
-body #gform_wrapper_1 #field_submit span:after, .gform_wrapper form .gfield input#gform_submit_button_3 span:after {
+body #gform_wrapper_1 #field_submit span:after, body #gform_wrapper_3 #field_submit span:after, .gform_wrapper form .gfield input#gform_submit_button_3 span:after {
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
@@ -1005,7 +1005,7 @@ body #gform_wrapper_1 #field_submit span:after, .gform_wrapper form .gfield inpu
   filter: invert(1);
 }
 
-body #gform_wrapper_1 #field_submit INPUT[type=submit] {
+body #gform_wrapper_1 #field_submit INPUT[type=submit], body #gform_wrapper_3 #field_submit INPUT[type=submit] {
   padding-right: 1rem;
   font-size: 2.25rem;
   line-height: 2.5rem;
