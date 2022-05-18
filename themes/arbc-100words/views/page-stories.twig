@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% for story in stories %}
+    <section class="h-screen w-screen bg-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
+        {{ story.category }}
+        {{ story.content }}
+        {{ story.title }}
+    </section>
+{% endfor %}
+
+{% endblock %}

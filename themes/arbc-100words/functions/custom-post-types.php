@@ -29,7 +29,7 @@ if ( ! function_exists( 'fix_no_editor_on_posts_page' ) ) {
 function arbc_faiths_cpt() {
 
     // CUSTOM POST TYPE
-    register_post_type( 
+    register_post_type(
         'story',
         array(
             'labels' => array(
@@ -46,7 +46,7 @@ function arbc_faiths_cpt() {
             ),
             'rewrite' => true,
             'hierarchical' => false,
-            'public' => true,
+            'public' => false,
             'publicly_queryable' => true,
             'show_ui' => true,
             'menu_position' => 15,

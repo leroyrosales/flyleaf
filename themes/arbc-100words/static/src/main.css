@@ -192,3 +192,23 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 .word-count-wrapper {
   @apply italic text-sm;
 }
+
+.bg-praise-and-thanksgiving {
+  @apply bg-cream;
+}
+
+.bg-trusting-without-resolution {
+  @apply bg-blue;
+}
+
+.bg-healing-moment {
+  @apply bg-primary;
+}
+
+.bg-his-ways-are-perfect {
+  @apply bg-secondary;
+}
+
+.bg-god-provided {
+  @apply bg-tertiary;
+}

@@ -14,7 +14,7 @@ module.exports = {
           accent: '#F5E199',
           black: '#3F3E3D',
           white: '#FBFAF3',
-          limestone: '#F1EFDB',
+          cream: '#F1EFDB',
           blue: '#D1EBEF',
         }
       },
