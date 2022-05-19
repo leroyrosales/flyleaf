@@ -552,6 +552,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-6 {
   height: 1.5rem;
 }
+.h-full {
+  height: 100%;
+}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -573,6 +576,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
 .flex-col-reverse {
   flex-direction: column-reverse;
 }
@@ -590,6 +596,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .justify-between {
   justify-content: space-between;
+}
+.justify-items-center {
+  justify-items: center;
 }
 .gap-3 {
   gap: 0.75rem;
@@ -738,6 +747,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .uppercase {
   text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -1046,6 +1058,16 @@ body #gform_wrapper_1 #field_submit INPUT[type=submit], body #gform_wrapper_3 #f
 .bg-god-provided {
   --tw-bg-opacity: 1;
   background-color: rgb(242 231 212 / var(--tw-bg-opacity));
+}
+
+.bg-miracle {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 241 192 / var(--tw-bg-opacity));
+}
+
+.bg-walking-in-faith {
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 250 243 / var(--tw-bg-opacity));
 }
 
 .hover\:border-secondary:hover {

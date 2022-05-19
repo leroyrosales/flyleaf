@@ -212,3 +212,11 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 .bg-god-provided {
   @apply bg-tertiary;
 }
+
+.bg-miracle {
+  @apply bg-yellow;
+}
+
+.bg-walking-in-faith {
+  @apply bg-white;
+}

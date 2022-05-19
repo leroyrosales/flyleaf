@@ -4,9 +4,18 @@
 
 {% for story in stories %}
     <section class="h-screen w-screen bg-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
-        {{ story.category }}
-        {{ story.content }}
-        {{ story.title }}
+        <div class="container mx-auto flex justify-center items-center h-full">
+            {{ story.category }}
+            <div class="flex flex-col">
+                <blockquote class="max-w-prose">
+                    {{ story.content }}
+                </blockquote>
+                <div class="text-right">
+                    <figcaption><strong>{{ story.display_name }}</strong></figcaption>
+                    <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
+                </div>
+            </div>
+        </div>
     </section>
 {% endfor %}
 

@@ -6,7 +6,11 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		{% include 'partial/header.twig' %}
+		{% if is_front_page %}
+			{% include 'partial/frontpage-header.twig' %}
+		{% else %}
+			{% include 'partial/header.twig' %}
+		{% endif %}
 
 		<main id="content" role="main" class="content-wrapper">
 			{% if title %}<h1>{{title}}</h1>{% endif %}
