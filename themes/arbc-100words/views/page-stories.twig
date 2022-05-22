@@ -7,13 +7,12 @@
         <div class="container mx-auto flex justify-center relative items-center h-full">
             <div class="-rotate-90 origin-left absolute left-0 bottom-0 uppercase text-center w-full"><h2 style="font-family: 'Inter', sans-serif;" class="text-2xl">{{ story.category }}</h2></div>
             <div class="flex flex-col">
+                <span class="category-icon icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></span>
                 <blockquote class="max-w-prose">
                     {{ story.content }}
                 </blockquote>
-                <div class="text-right pt-12">
-                    <figcaption><strong>{{ story.display_name }}</strong></figcaption>
-                    <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
-                </div>
+                <figcaption class="text-right pt-12"><strong>{{ story.display_name }}</strong></figcaption>
+                <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
             </div>
         </div>
     </section>

@@ -225,3 +225,36 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 .bg-walking-in-faith {
   @apply bg-white;
 }
+
+/* icons */
+.category-icon {
+  @apply text-center pb-8;
+}
+
+.icon-praise-and-thanksgiving:after {
+ content: 'test';
+}
+
+.icon-trusting-without-resolution:after {
+ content: 'test';
+}
+
+.icon-healing-moment:after {
+ content: 'test';
+}
+
+.icon-his-ways-are-perfect:after {
+ content: 'test';
+}
+
+.icon-god-provided:after {
+ content: 'test';
+}
+
+.icon-miracle:after {
+ content: 'test';
+}
+
+.icon-walking-in-faith:after {
+ content: 'test';
+}
