@@ -7,12 +7,12 @@
 
 {% set numberOfWords = story.content|split(' ')|length %}
 
-    <section class="h-screen w-screen bg-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
-        <div class="container mx-auto flex justify-center relative items-center h-full">
+    <section class="snap-y snap-mandatory h-screen w-screen bg-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
+        <div class="snap-start container mx-auto flex justify-center relative items-center h-full">
             <div class="absolute left-0"><h2 style="font-family: 'Inter', sans-serif; transform: translateX(-50%) translateY(-50%) rotate(-90deg);" class="uppercase text-2xl">{{ story.category }}</h2></div>
             <div class="flex flex-col">
                 <span class="category-icon icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></span>
-                <blockquote class="max-w-prose {{ numberOfWords <= 75 ? 'short-story' : 'text-3xl' }}">
+                <blockquote class="max-w-4xl {{ numberOfWords <= 75 ? 'short-story' : 'text-3xl' }}">
                     {{ story.content }}
                 </blockquote>
                 <div class="text-right">
