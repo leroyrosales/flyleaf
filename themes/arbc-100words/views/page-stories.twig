@@ -5,14 +5,16 @@
 {% for story in stories %}
     <section class="h-screen w-screen bg-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
         <div class="container mx-auto flex justify-center relative items-center h-full">
-            <div class="-rotate-90 origin-left absolute left-0 uppercase text-center"><h2 style="font-family: 'Inter', sans-serif;" class="text-2xl">{{ story.category }}</h2></div>
+            <div class="absolute left-0"><h2 style="font-family: 'Inter', sans-serif; transform: translateX(-50%) translateY(-50%) rotate(-90deg);" class="uppercase text-2xl">{{ story.category }}</h2></div>
             <div class="flex flex-col">
                 <span class="category-icon icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></span>
                 <blockquote class="max-w-prose">
                     {{ story.content }}
                 </blockquote>
-                <figcaption class="text-right pt-12"><strong>{{ story.display_name }}</strong></figcaption>
-                <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
+                <div class="text-right">
+                    <figcaption class="pt-12"><strong>{{ story.display_name }}</strong></figcaption>
+                    <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
+                </div>
             </div>
         </div>
     </section>
