@@ -26,22 +26,4 @@ $context = Timber::context();
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
-$args = array(
-    'cat' => array(
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-    ),
-    'posts_per_page' => -1,
-    'paged' => $paged,
-    'post_type' => 'story',
-);
-
-$context['stories'] = new Timber\PostQuery( $args );
-
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );

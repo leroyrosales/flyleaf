@@ -1,20 +1,18 @@
-<header class="absolute w-full z-10 pt-8">
+<header class="w-full z-10 pt-8" id="header">
     <section>
         <div class="container mx-auto flex justify-between">
             <a href="{{ site.url }}"><img class="h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo.svg" alt="Austin Ridge Bible Church logo"></a>
-            <select class="bg-transparent">
-                <option>Filter by category</option>
-                <option>Praise & Thanksgiving</option>
-                <option>God Provided</option>
-                <option>Trusting Without Resolution</option>
-                <option>Miracle</option>
-                <option>Healing Moment</option>
-                <option>His Ways Are Perfect</option>
-                <option>Walking In Faith</option>
-            </select>
+            <h1 class="text-3xl lowercase">{{ site.name }}</h1>
+            <nav class="bg-transparent relative" id="category-filter">
+                <ul>
+                <li>FILTER BY CATEGORY</li>
+                <span class="hidden">
+                {% for story in stories %}
+                    <li><span class="h-8 icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></span> {{ story.category }}</li>
+                {% endfor %}
+                </span>
+                </ul>
+            </nav>
         </div>
     </section>
-    <div class="absolute w-full text-center">
-        <h1 class="text-3xl lowercase">{{ site.name }}</h1>
-    </div>
 </header>
