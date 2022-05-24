@@ -34,7 +34,8 @@ $args = array(
         5,
         6,
         7,
-        8
+        8,
+        9
     ),
     'posts_per_page' => -1,
     'paged' => $paged,
