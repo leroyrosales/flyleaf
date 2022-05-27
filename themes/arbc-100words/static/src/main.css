@@ -66,12 +66,12 @@ a {
   line-height: .25;
 }
 
-form {
+form#gform_3 {
   @apply bg-accent w-screen p-24 relative;
   max-width: 960px;
 }
 
-form .ginput_container_textarea {
+form#gform_3 .ginput_container_textarea {
   @apply bg-white p-4 pb-8 mb-4;
 }
 
@@ -79,8 +79,8 @@ form .ginput_container_textarea textarea {
   @apply bg-transparent w-full;
 }
 
-form #field_1_1 label,
-form #field_3_1 label {
+form#gform_3 #field_1_1 label,
+form#gform_3 #field_3_1 label {
   @apply hidden;
 }
 
@@ -90,12 +90,12 @@ fieldset#field_3_2 .gfield_label {
   font-family: 'DM Serif Text', serif;
 }
 
-form .ginput_container.ginput_container_radio {
+form#gform_3 .ginput_container.ginput_container_radio {
   clear: left;
 }
 
-form input[type=radio],
-form input[type=checkbox] {
+formform#gform_3 input[type=radio],
+formform#gform_3 input[type=checkbox] {
   border: none;
   background-color: #FBFAF3;
   padding: 0.5em;
@@ -103,47 +103,47 @@ form input[type=checkbox] {
   margin-right: 8px;
 }
 
-form input[type=radio]:checked,
-form input[type=checkbox]:checked {
+formform#gform_3 input[type=radio]:checked,
+formform#gform_3 input[type=checkbox]:checked {
   background-color: #3F3E3D;
 }
 
-form input[type=radio]:focus,
-form input[type=checkbox]:focus {
+formform#gform_3 input[type=radio]:focus,
+formform#gform_3 input[type=checkbox]:focus {
   outline-color: transparent;
 }
 
-form .gfield_checkbox .gchoice {
+formform#gform_3 .gfield_checkbox .gchoice {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   padding-right: 8px;
 }
 
-form fieldset {
+formform#gform_3 fieldset {
   @apply pb-12;
 }
 
-form .gchoice label {
+formform#gform_3 .gchoice label {
   @apply italic text-base;
 }
 
-form .gfield_label {
+formform#gform_3 .gfield_label {
   @apply text-2xl pb-4;
   font-family: 'DM Serif Text', serif;
 }
 
-form .gfield_description {
+formform#gform_3 .gfield_description {
   @apply text-base inline-block italic pl-2;
 }
 
-form .gfield_radio {
+formform#gform_3 .gfield_radio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-form .gfield_radio .gchoice {
+formform#gform_3 .gfield_radio .gchoice {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -151,36 +151,36 @@ form .gfield_radio .gchoice {
   padding-bottom: 16px;
 }
 
-form #field_1_4,
-form #field_3_4 {
+formform#gform_3 #field_1_4,
+formform#gform_3 #field_3_4 {
   @apply inline-block w-full;
   max-width: 400px;
 }
 
-form #field_1_5,
-form #field_3_5 {
+formform#gform_3 #field_1_5,
+formform#gform_3 #field_3_5 {
   @apply ml-4 inline-block;
 }
 
-form #field_1_5 .gfield_label,
-form #field_3_5 .gfield_label,
-form .gform_validation_container {
+formform#gform_3 #field_1_5 .gfield_label,
+formform#gform_3 #field_3_5 .gfield_label,
+formform#gform_3 .gform_validation_container {
   @apply hidden;
 }
 
-form .ginput_container_text input[type=text],
-form .ginput_container_email input[type=email] {
+formform#gform_3 .ginput_container_text input[type=text],
+formform#gform_3 .ginput_container_email input[type=email] {
   @apply w-full p-2;
   max-width: 400px;
 }
 
-form #field_submit {
+formform#gform_3 #field_submit {
   @apply bg-white text-black inline absolute right-0 bottom-16 p-6 hover:cursor-pointer hover:bg-black hover:text-white;
 }
 
 body #gform_wrapper_1 #field_submit span:after,
 body #gform_wrapper_3 #field_submit span:after,
-.gform_wrapper form .gfield input#gform_submit_button_3 span:after {
+.gform_wrapper formform#gform_3 .gfield input#gform_submit_button_3 span:after {
   @apply text-black text-lg;
   content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='30' height='14' fill='none' viewBox='0 0 30 14'%3E%3Cpath fill='%233F3E3D' d='M16.802 5.885H4.439L0 .065h12.19l4.612 5.82Zm0 1.871L12.234 13.6H.012l4.439-5.844h12.351ZM30 6.825c-1.5.688-2.92 1.654-4.216 2.868-1.113 1.05-2.06 2.377-2.788 3.907a6.307 6.307 0 0 1-.525-1.316 5.284 5.284 0 0 1-.186-1.39 6.813 6.813 0 0 1 .186-1.634 8.04 8.04 0 0 1 .525-1.545h-5.854V5.844h5.854a7.464 7.464 0 0 1-.525-1.52 6.897 6.897 0 0 1-.186-1.635c0-.466.063-.928.186-1.365.128-.471.305-.917.525-1.324.701 1.53 1.63 2.853 2.732 3.89 1.31 1.246 2.748 2.235 4.272 2.935Z'/%3E%3C/svg%3E%0A");
 }

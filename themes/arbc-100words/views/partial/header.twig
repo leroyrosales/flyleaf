@@ -3,16 +3,16 @@
         <div class="container mx-auto flex justify-between">
             <a href="{{ site.url }}"><img class="h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo.svg" alt="Austin Ridge Bible Church logo"></a>
             <h1 class="text-3xl lowercase">{{ site.name }}</h1>
-            <nav class="bg-transparent relative" id="category-filter">
+            <form class="bg-transparent relative" id="category-filter">
                 <ul>
                 <li>FILTER BY CATEGORY</li>
                 <span class="hidden">
                 {% for story in stories %}
-                    <li><span class="h-8 icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></span> {{ story.category }}</li>
+                    <li><div class="h-[13px] w-[13px] inline-block bg-no-repeat bg-contain bg-center icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div> {{ story.category }}</li>
                 {% endfor %}
                 </span>
                 </ul>
-            </nav>
+            </form>
         </div>
     </section>
 </header>

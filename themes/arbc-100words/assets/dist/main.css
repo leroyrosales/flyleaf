@@ -529,6 +529,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .block {
   display: block;
 }
+.inline-block {
+  display: inline-block;
+}
+.inline {
+  display: inline;
+}
 .flex {
   display: flex;
 }
@@ -550,6 +556,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-8 {
   height: 2rem;
 }
+.h-\[13px\] {
+  height: 13px;
+}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -564,6 +573,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-auto {
   width: auto;
+}
+.w-\[13px\] {
+  width: 13px;
 }
 .max-w-prose {
   max-width: 65ch;
@@ -664,6 +676,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
+}
+.bg-contain {
+  background-size: contain;
+}
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
 }
 .p-2 {
   padding: 0.5rem;
@@ -891,7 +912,7 @@ a {
   line-height: .25;
 }
 
-form {
+form#gform_3 {
   position: relative;
   width: 100vw;
   --tw-bg-opacity: 1;
@@ -900,7 +921,7 @@ form {
   max-width: 960px;
 }
 
-form .ginput_container_textarea {
+form#gform_3 .ginput_container_textarea {
   margin-bottom: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(251 250 243 / var(--tw-bg-opacity));
@@ -913,7 +934,7 @@ form .ginput_container_textarea textarea {
   background-color: transparent;
 }
 
-form #field_1_1 label, form #field_3_1 label {
+form#gform_3 #field_1_1 label, form#gform_3 #field_3_1 label {
   display: none;
 }
 
@@ -923,12 +944,12 @@ fieldset#field_3_2 .gfield_label {
   font-family: 'DM Serif Text', serif;
 }
 
-form .ginput_container.ginput_container_radio {
+form#gform_3 .ginput_container.ginput_container_radio {
   clear: left;
 }
 
-form input[type=radio],
-form input[type=checkbox] {
+formform#gform_3 input[type=radio],
+formform#gform_3 input[type=checkbox] {
   border: none;
   background-color: #FBFAF3;
   padding: 0.5em;
@@ -936,41 +957,41 @@ form input[type=checkbox] {
   margin-right: 8px;
 }
 
-form input[type=radio]:checked,
-form input[type=checkbox]:checked {
+formform#gform_3 input[type=radio]:checked,
+formform#gform_3 input[type=checkbox]:checked {
   background-color: #3F3E3D;
 }
 
-form input[type=radio]:focus,
-form input[type=checkbox]:focus {
+formform#gform_3 input[type=radio]:focus,
+formform#gform_3 input[type=checkbox]:focus {
   outline-color: transparent;
 }
 
-form .gfield_checkbox .gchoice {
+formform#gform_3 .gfield_checkbox .gchoice {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
   padding-right: 8px;
 }
 
-form fieldset {
+formform#gform_3 fieldset {
   padding-bottom: 3rem;
 }
 
-form .gchoice label {
+formform#gform_3 .gchoice label {
   font-size: 1rem;
   line-height: 1.5rem;
   font-style: italic;
 }
 
-form .gfield_label {
+formform#gform_3 .gfield_label {
   padding-bottom: 1rem;
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: 'DM Serif Text', serif;
 }
 
-form .gfield_description {
+formform#gform_3 .gfield_description {
   display: inline-block;
   padding-left: 0.5rem;
   font-size: 1rem;
@@ -978,13 +999,13 @@ form .gfield_description {
   font-style: italic;
 }
 
-form .gfield_radio {
+formform#gform_3 .gfield_radio {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-form .gfield_radio .gchoice {
+formform#gform_3 .gfield_radio .gchoice {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
@@ -992,28 +1013,28 @@ form .gfield_radio .gchoice {
   padding-bottom: 16px;
 }
 
-form #field_1_4, form #field_3_4 {
+formform#gform_3 #field_1_4, formform#gform_3 #field_3_4 {
   display: inline-block;
   width: 100%;
   max-width: 400px;
 }
 
-form #field_1_5, form #field_3_5 {
+formform#gform_3 #field_1_5, formform#gform_3 #field_3_5 {
   margin-left: 1rem;
   display: inline-block;
 }
 
-form #field_1_5 .gfield_label, form #field_3_5 .gfield_label, form .gform_validation_container {
+formform#gform_3 #field_1_5 .gfield_label, formform#gform_3 #field_3_5 .gfield_label, formform#gform_3 .gform_validation_container {
   display: none;
 }
 
-form .ginput_container_text input[type=text], form .ginput_container_email input[type=email] {
+formform#gform_3 .ginput_container_text input[type=text], formform#gform_3 .ginput_container_email input[type=email] {
   width: 100%;
   padding: 0.5rem;
   max-width: 400px;
 }
 
-form #field_submit {
+formform#gform_3 #field_submit {
   position: absolute;
   right: 0px;
   bottom: 4rem;
@@ -1025,7 +1046,7 @@ form #field_submit {
   color: rgb(63 62 61 / var(--tw-text-opacity));
 }
 
-form #field_submit:hover {
+formform#gform_3 #field_submit:hover {
   cursor: pointer;
   --tw-bg-opacity: 1;
   background-color: rgb(63 62 61 / var(--tw-bg-opacity));
@@ -1033,7 +1054,7 @@ form #field_submit:hover {
   color: rgb(251 250 243 / var(--tw-text-opacity));
 }
 
-body #gform_wrapper_1 #field_submit span:after, body #gform_wrapper_3 #field_submit span:after, .gform_wrapper form .gfield input#gform_submit_button_3 span:after {
+body #gform_wrapper_1 #field_submit span:after, body #gform_wrapper_3 #field_submit span:after, .gform_wrapper formform#gform_3 .gfield input#gform_submit_button_3 span:after {
   font-size: 1.125rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
