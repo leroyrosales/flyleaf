@@ -12,10 +12,10 @@ categoryFilter.addEventListener( 'click', (e) =>
     e.target.nextSibling.nextSibling.classList.toggle('hidden')
 );
 
-const storyCategories = document.querySelectorAll('[data-category]');
+document.addEventListener( 'click', function (e) {
 
-for( let i = 0; i < storyCategories.length; i++ ) {
-    storyCategories[i].addEventListener('click', () => {
-        console.log( storyCategories[i].dataset.category )
-    })
-}
+	if ( e.target.matches( '[data-category]' ) ) {
+		console.log(e.target.dataset);
+	}
+
+}, false);
