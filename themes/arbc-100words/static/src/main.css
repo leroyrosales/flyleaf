@@ -228,7 +228,7 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 
 /* icons */
 .category-icon {
-  @apply text-center mb-8 pb-8 bg-no-repeat bg-contain bg-center;
+  @apply text-center mb-8 pb-8 bg-no-repeat bg-contain bg-center w-[26px] h-[26px];
 }
 
 .icon-praise-and-thanksgiving {

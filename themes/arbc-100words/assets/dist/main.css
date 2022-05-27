@@ -541,9 +541,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hidden {
   display: none;
 }
-.h-screen {
-  height: 100vh;
-}
 .h-full {
   height: 100%;
 }
@@ -556,8 +553,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-h-96 {
   max-height: 24rem;
 }
-.w-screen {
-  width: 100vw;
+.min-h-screen {
+  min-height: 100vh;
 }
 .w-6 {
   width: 1.5rem;
@@ -1098,6 +1095,8 @@ body #gform_wrapper_1 #field_submit INPUT[type=submit], body #gform_wrapper_3 #f
 /* icons */
 .category-icon {
   margin-bottom: 2rem;
+  height: 26px;
+  width: 26px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
