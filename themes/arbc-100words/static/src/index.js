@@ -15,7 +15,7 @@ categoryFilter.addEventListener( 'click', (e) =>
 document.addEventListener( 'click', function (e) {
 
 	if ( e.target.matches( '[data-category]' ) ) {
-		console.log(e.target.dataset);
+		console.log(e.target.dataset.category);
 	}
 
 }, false);
