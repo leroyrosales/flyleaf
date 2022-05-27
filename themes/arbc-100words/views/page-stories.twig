@@ -19,7 +19,7 @@
                 </blockquote>
                 <div class="text-right">
                     <figcaption class="pt-12"><strong>{{ story.display_name }}</strong></figcaption>
-                    {% if story.home_campus is not 'do_not_attend' %}
+                    {% if story.home_campus != "do_not_attend" %}
                         <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
                     {% endif %}
                 </div>
