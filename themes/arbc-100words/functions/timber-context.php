@@ -32,6 +32,8 @@ add_filter( 'timber_context', function ( $context ) {
 
 	$context['stories'] = new Timber\PostQuery( $args );
 
+	$context['categories'] = get_categories();
+
 	return $context;
 
 

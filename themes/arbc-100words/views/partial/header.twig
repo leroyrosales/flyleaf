@@ -7,8 +7,8 @@
                 <ul>
                 <li id="category-filter">FILTER BY CATEGORY</li>
                 <span class="hidden">
-                {% for story in stories %}
-                    <li data-category="{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}"><div class="h-[13px] w-[13px] inline-block bg-no-repeat bg-contain bg-center icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div> {{ story.category }}</li>
+                {% for category in categories %}
+                    <li data-category="{{ category.slug }}"><div class="h-[13px] w-[13px] inline-block bg-no-repeat bg-contain bg-center icon-{{ category.slug | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div> {{ category.name }}</li>
                 {% endfor %}
                 </span>
                 </ul>
