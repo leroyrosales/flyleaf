@@ -14,24 +14,6 @@ add_filter( 'timber_context', function ( $context ) {
 	// Is front page of site
 	$context['is_front_page'] = is_front_page();
 
-	// Stories category context
-	$args = array(
-		'cat' => array(
-			2,
-			3,
-			4,
-			5,
-			6,
-			7,
-			8,
-			9
-		),
-		'posts_per_page' => -1,
-		'post_type' => 'story',
-	);
-
-	$context['stories'] = new Timber\PostQuery( $args );
-
 	$context['categories'] = get_categories();
 
 	return $context;

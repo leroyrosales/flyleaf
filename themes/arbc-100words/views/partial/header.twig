@@ -2,13 +2,13 @@
     <section>
         <div class="container mx-auto flex justify-between">
             <a href="{{ site.url }}"><img class="h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo.svg" alt="Austin Ridge Bible Church logo"></a>
-            <h1 class="text-3xl lowercase">{{ site.name }}</h1>
+            <h1 class="text-3xl lowercase"><a class="text-black" href="{{ site.url }}/stories">{{ site.name }}</a></h1>
             <form class="bg-transparent relative">
                 <ul>
                 <li id="category-filter">FILTER BY CATEGORY</li>
                 <span class="hidden">
                 {% for category in categories %}
-                    <li data-category="{{ category.slug }}"><div class="h-[13px] w-[13px] inline-block bg-no-repeat bg-contain bg-center icon-{{ category.slug | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div> {{ category.name }}</li>
+                    <li data-category="{{ category.slug }}"><a class="text-black" href="{{ site.url }}/category/{{ category.slug }}"><div class="h-[13px] w-[13px] inline-block bg-no-repeat bg-contain bg-center icon-{{ category.slug | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div> {{ category.name }}</a></li>
                 {% endfor %}
                 </span>
                 </ul>

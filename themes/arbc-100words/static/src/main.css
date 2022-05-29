@@ -263,3 +263,10 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
   @apply text-4xl;
   font-family: 'DM Serif Text', serif;
 }
+
+.rotate-category {
+  @apply uppercase text-2xl absolute left-0;
+  font-family: 'Inter', sans-serif;
+  transform: translate(-50%, 50%) rotate(-90deg);
+  top: 10em;
+}
