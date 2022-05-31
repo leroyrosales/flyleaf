@@ -135,7 +135,7 @@ fieldset#field_3_2 .gfield_label {
 }
 
 .one-hundred-form_wrapper .gfield_description {
-  @apply text-base inline-block italic pl-2;
+  @apply text-base inline-block italic pl-2 pt-1;
 }
 
 .one-hundred-form_wrapper .gfield_radio {
@@ -275,4 +275,15 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
   font-family: 'Inter', sans-serif;
   transform: translate(-50%, 50%) rotate(-90deg);
   top: 10em;
+}
+
+.one-hundred-form_wrapper .gfield_description.gfield_validation_message {
+  @apply p-0;
+  color: red;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.one-hundred-form_wrapper .gfield_required {
+  @apply hidden;
 }
