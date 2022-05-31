@@ -14,7 +14,7 @@ add_filter( 'timber_context', function ( $context ) {
 	// Is front page of site
 	$context['is_front_page'] = is_front_page();
 
-	$context['categories'] = get_categories();
+	$context['categories'] = get_categories( '"exclude" => 1' );
 
 	return $context;
 
