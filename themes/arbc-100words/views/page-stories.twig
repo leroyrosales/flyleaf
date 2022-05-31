@@ -4,7 +4,7 @@
 
 {% for story in story_category %}
 
-     {% for product in story.products %}
+     {% for product in story.products|slice(0,1) %}
 
         {% set numberOfWords = product.content|split(' ')|length %}
 
