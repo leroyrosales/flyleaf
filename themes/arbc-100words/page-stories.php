@@ -26,23 +26,27 @@ $context = Timber::context();
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
-// Stories category context
-$args = array(
-    'cat' => array(
-        2,
-        3,
-        4,
-        5,
-        6,
-        7,
-        8,
-        9
-    ),
-    'posts_per_page' => -1,
-    'post_type' => 'story',
-);
+// Get terms, exclude uncategorized
+$story_terms = Timber::get_terms( 'category', array( 'exclude' => array( 1 ) ) );
 
-$context['stories'] = new Timber\PostQuery( $args );
+// Get latest cpt in each category
+foreach ( $story_terms as &$story_term ) {
+	$args = array(
+		'post_type'     => 'story',
+		'post_per_page' => 1,
+		'tax_query'     => array(
+			array(
+				'taxonomy' => 'category',
+				'field'    => 'slug',
+				'terms'    => $story_term->slug,
+			),
+		),
+	);
+
+	$story_term->products = Timber::get_posts( $args );
+}
+
+$context['story_category'] = $story_terms;
 
 
 Timber::render( array( 'page-' . $timber_post->post_name . '.twig', 'page.twig' ), $context );
