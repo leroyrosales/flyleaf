@@ -14,6 +14,10 @@ body {
   line-height: 1.6;
 }
 
+.arbc-container {
+  @apply container mx-auto flex px-4;
+}
+
 #navbar > * {
   min-width: 225px;
 }

@@ -2,15 +2,11 @@
 <header class="header bg-primary sm:flex sm:justify-between relative">
 
   {% block header %}
-    <section class="container mx-auto py-4 flex justify-between">
-        <a class="text-black self-center uppercase" href="{{ site.url }}" rel="home">Austin Ridge Bible Church</a>
-        {% if mobile_menu %}
-        <div class="d-block d-lg-none col text-end">
-          <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobileMenu" aria-controls="navbarMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="display-4 fa fa-bars"></i>
-          </button>
-        </div>
-        {% endif %}
+    <section class="arbc-container py-4 justify-between">
+        <a class="self-center" href="{{ site.url }}" rel="home">
+          <span class="hidden md:block text-black uppercase">Austin Ridge Bible Church</span>
+          <img class="block md:hidden h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo.svg" alt="Austin Ridge Bible Church logo">
+        </a>
         <nav id="nav-main" class="navbar" role="navigation">
           <div class="">
             {% include "partial/menu.twig" with { 'menu': primary_menu.get_items } %}
@@ -18,45 +14,6 @@
         </nav><!-- #nav -->
     </section>
 
-
-      <div class="absolute top-0 right-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" id="open-mobile-menu" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!--
-            Icon when menu is closed.
-
-            Heroicon name: outline/menu
-
-            Menu open: "hidden", Menu closed: "block"
-          -->
-          <svg id="closed-nav-icon" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#0000ff" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-          <!--
-            Icon when menu is open.
-
-            Heroicon name: outline/x
-
-            Menu open: "block", Menu closed: "hidden"
-          -->
-          <svg id="open-nav-icon" class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#0000ff" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
   {% endblock %}
 </header>
-
-{% if mobile_menu %}
-	<nav class="navbar--mobile-menu d-lg-none position-fixed" id="navbarMobileMenu" style="left: -80vw">
-		<ul class="list-unstyled p-5">
-      {% for item in mobile_menu.get_items %}
-        <li class="text-decoration-none">
-          <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
-        </li>
-      {% endfor %}
-		</ul>
-	</nav>
-{% endif %}
 

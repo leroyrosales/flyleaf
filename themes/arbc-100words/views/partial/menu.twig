@@ -1,6 +1,6 @@
 {% if menu %}
 
-	<ul class="hidden sm:flex">
+	<ul class="flex">
 	{% for item in menu %}
 		<li class="nav-item flex-fill {{ item.classes | join(' ') }}">
 			<a class="text-xl uppercase border-8 border-transparent bg-transparent font-bold text-black" target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>
@@ -8,18 +8,5 @@
 	{% endfor %}
 	</ul>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
-      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-	  {% for item in menu %}
-	  	<a href="{{ item.link }}" target="{{ item.target }}" class="block text-xl uppercase border-8 border-transparent bg-transparent font-bold text-black px-8 py-4 hover:bg-white hover:text-tertiary hover:border-secondary">{{ item.title }}</a>
-		{% endfor %}
-    </div>
-  </div>
-
 {% endif %}
-
-
-
 
