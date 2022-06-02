@@ -1,18 +1,19 @@
 <footer class="footer bg-black">
-  <section class="px-48 pt-16 pb-8 flex justify-between">
+  <section class="px-8 md:px-48 pt-16 pb-8 flex flex-col md:flex-row md:justify-between">
     <div>
-      <h3 class="text-5xl pb-4"><a target="_blank" href="https://www.austinridge.org/" class="text-white">Austin Ridge<br/>Bible Church</a></h3>
-      <p class="text-2xl text-white opacity-5 hover:opacity-100 duration-100">&copy; {{"now"|date('Y')}} <a class="text-white" href="{{ site.url }}" class="text-decoration-none">Austin Ridge Bible Church</a></p>
+      <h3 class="text-center md:text-left text-5xl pb-4"><a target="_blank" href="https://www.austinridge.org/" class="text-white">Austin Ridge<br/>Bible Church</a></h3>
+      <p class="hidden md:block text-2xl text-white opacity-5 hover:opacity-100 duration-100">&copy; {{"now"|date('Y')}} <a class="text-white" href="{{ site.url }}" class="text-decoration-none">Austin Ridge Bible Church</a></p>
       {# <h3 class="text-3xl text-white"><a href="#">Bee Cave</a></h3>
       <h3 class="text-3xl text-white"><a href="#">Dripping Springs</a></h3>
       <h3 class="text-3xl text-white"><a href="#">Southwest</a></h3> #}
     </div>
-    <ul class="text-right space-y-4">
+    <ul class="text-center md:text-right space-y-4">
       <li><a target="_blank" href="https://www.facebook.com/austinridgebible" class="uppercase">Facebook</a></li>
       <li><a target="_blank" href="https://www.instagram.com/austinridgebible/" class="uppercase">Instagram</a></li>
       <li><a target="_blank" href="https://twitter.com/austinridge" class="uppercase">Twitter</a></li>
     </ul>
   </section>
-  <section class="pt-48 footer-dots-bg">
+  <section class="pt-24 md:pt-48 footer-dots-bg text-center">
+    <p class="block md:hidden text-2xl text-white opacity-80 hover:opacity-100 duration-100 pb-8">&copy; {{"now"|date('Y')}} <a class="text-white" href="{{ site.url }}" class="text-decoration-none">Austin Ridge Bible Church</a></p>
   </section>
 </footer>

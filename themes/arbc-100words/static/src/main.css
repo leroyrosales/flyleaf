@@ -29,7 +29,7 @@ h3 {
 }
 
 h1 {
-  @apply text-9xl;
+  @apply text-5xl md:text-9xl;
 }
 
 h1.page-title {
@@ -66,22 +66,22 @@ a {
 }
 
 .gform_wrapper {
-  @apply pt-36;
+  @apply pt-8 md:pt-36;
 }
 
 .gform_title {
-  @apply text-7xl font-bold pl-24 relative z-10;
+  @apply text-4xl md:text-7xl font-bold md:pl-24 relative z-10;
   line-height: .25;
 }
 
 .one-hundred-form_wrapper,
 .gform_confirmation_wrapper {
-  @apply bg-accent w-screen p-24 relative;
+  @apply bg-accent w-screen px-4 py-4 md:p-24 relative;
   max-width: 960px;
 }
 
 .one-hundred-form_wrapper .ginput_container_textarea {
-  @apply bg-white p-12 mb-4;
+  @apply bg-white p-6 md:p-12 mb-4;
 }
 
 form .ginput_container_textarea textarea {
@@ -147,9 +147,7 @@ fieldset#field_3_2 .gfield_label {
 }
 
 .one-hundred-form_wrapper .gfield_radio {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  @apply md:flex md:flex-row md:flex-wrap;
 }
 
 .one-hundred-form_wrapper .gfield_radio .gchoice {
@@ -168,7 +166,7 @@ fieldset#field_3_2 .gfield_label {
 
 .one-hundred-form_wrapper #field_1_5,
 .one-hundred-form_wrapper #field_3_5 {
-  @apply ml-4 inline-block;
+  @apply mt-4 md:mt-0 md:ml-4 inline-block;
 }
 
 .one-hundred-form_wrapper #field_1_5 .gfield_label,
@@ -184,7 +182,7 @@ fieldset#field_3_2 .gfield_label {
 }
 
 .one-hundred-form_wrapper #field_submit {
-  @apply bg-white text-black inline absolute right-0 bottom-16 p-6 hover:cursor-pointer hover:bg-black hover:text-white;
+  @apply bg-white text-black inline-block mt-8 md:mt-0 md:inline md:absolute right-0 md:bottom-16 p-6 hover:cursor-pointer hover:bg-black hover:text-white;
 }
 
 body #gform_wrapper_1 #field_submit span:after,
