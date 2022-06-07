@@ -18,8 +18,10 @@ body {
   @apply container mx-auto flex px-4;
 }
 
-#navbar > * {
-  min-width: 225px;
+@media screen and (min-width: 768px) {
+  #navbar > * {
+    min-width: 225px;
+  }
 }
 
 h1,
@@ -70,13 +72,17 @@ a {
 }
 
 .gform_title {
-  @apply text-4xl md:text-7xl font-bold md:pl-24 relative z-10;
+  @apply -mt-12 md:mt-0 text-4xl md:text-7xl font-bold md:pl-24 relative z-10;
   line-height: .25;
+}
+
+.gform_heading {
+  @apply pt-4 md:pt-0;
 }
 
 .one-hundred-form_wrapper,
 .gform_confirmation_wrapper {
-  @apply bg-accent w-screen px-4 py-4 md:p-24 relative;
+  @apply bg-accent w-screen pt-4 pb-12 px-4 md:p-24 relative;
   max-width: 960px;
 }
 
@@ -182,7 +188,8 @@ fieldset#field_3_2 .gfield_label {
 }
 
 .one-hundred-form_wrapper #field_submit {
-  @apply bg-white text-black inline-block mt-8 md:mt-0 md:inline md:absolute right-0 md:bottom-16 p-6 hover:cursor-pointer hover:bg-black hover:text-white;
+  @apply bg-white text-black inline-block -mr-4 md:mr-0 mt-8 md:mt-0 md:inline md:absolute right-0 md:bottom-16 p-6 hover:cursor-pointer hover:bg-black hover:text-white;
+  float: right;
 }
 
 body #gform_wrapper_1 #field_submit span:after,

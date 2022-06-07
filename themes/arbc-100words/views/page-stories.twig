@@ -18,7 +18,7 @@
                     <blockquote class="max-w-4xl {{ numberOfWords <= 75 ? 'short-story' : 'text-3xl' }}">
                         {{ product.content }}
                     </blockquote>
-                    <div class="text-right">
+                    <div class="md:text-right">
                         <figcaption class="pt-12"><strong>{{ product.display_name }}</strong></figcaption>
                         {% if product.home_campus != "do_not_attend" %}
                             <span>{{ product.home_campus | upper | replace({ '_' : ' ' }) }}</span>
