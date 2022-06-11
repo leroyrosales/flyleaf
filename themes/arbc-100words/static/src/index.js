@@ -6,12 +6,22 @@ import './main.css';
 // const firstSection = document.querySelector('main section');
 // header.style.backgroundColor = window.getComputedStyle(firstSection).backgroundColor;
 
-const categoryMenu = document.querySelector( '[data-category-menu]' );
+// const categoryMenu = document.querySelector( '[data-category-menu]' );
+const mobileMenu = document.querySelector( '[data-mobile-menu]' );
+const mobileNav = document.querySelector( '[data-mobile-nav]' );
+const desktopNav = document.getElementById( 'navbar' );
 
 document.addEventListener( 'click', function (e) {
 
 	if ( e.target.matches( '[data-menu-btn]' ) ) {
-		categoryMenu.classList.toggle( 'hidden' );
+		//categoryMenu.classList.toggle( 'hidden' );
 	}
 
 }, false);
+
+mobileMenu.addEventListener( 'click', () => {
+	//mobileNav.classList.toggle( 'hidden' );
+	mobileNav.style.display = mobileNav.style.display === 'none' ? '' : 'none';
+	desktopNav.style.display = 'none';
+});
+
