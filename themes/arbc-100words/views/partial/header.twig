@@ -1,4 +1,4 @@
-<header class="w-full z-10 py-4 md:pt-8 absolute bg-black md:bg-transparent">
+<header class="w-full z-10 py-4 md:pt-8 md:absolute bg-black md:bg-transparent">
     <section>
         <div class="arbc-container justify-between items-center md:items-top" id="navbar">
             <a href="{{ site.url }}"><img class="md:hidden h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo-white.svg" alt="Austin Ridge Bible Church logo"><img class="hidden md:block h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo.svg" alt="Austin Ridge Bible Church logo"></a>
@@ -6,7 +6,7 @@
             <form class="hidden md:block bg-transparent relative">
                 <ul>
                 <li class="flex items-center" data-menu-btn>FILTER BY CATEGORY  <svg class="pl-2" xmlns="http://www.w3.org/2000/svg" width="22" height="12" fill="none" viewBox="0 0 22 12"><path stroke="#989896" d="m1 1 10 10L21 1"/></svg></li>
-                <span data-category-menu>
+                <span class="hidden" data-category-menu>
                 {% for category in categories %}
                     <li data-category="{{ category.slug }}"><a class="text-black" href="{{ site.url }}/category/{{ category.slug }}"><div class="h-[13px] w-[13px] inline-block bg-no-repeat bg-contain bg-center icon-{{ category.slug | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div> {{ category.name }}</a></li>
                 {% endfor %}
