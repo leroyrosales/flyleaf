@@ -8,14 +8,14 @@
 
         {% set numberOfWords = product.content|split(' ')|length %}
 
-        <section class="snap-y snap-mandatory min-h-screen flex flex-col justify-center bg-{{ product.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
+        <section class="snap-y snap-mandatory min-h-screen flex flex-col justify-center py-10 md:py-0 bg-{{ product.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
             <div class="arbc-container justify-center relative">
                 <div class="category-icon icon-{{ product.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div>
-                <h2 class="rotate-category">{{ product.category }}</h2>
+                <h2 class="pt-12 md:pt-0 rotate-category">{{ product.category }}</h2>
             </div>
             <div class="snap-start arbc-container justify-center relative h-full">
-                <div class="flex flex-col">
-                    <blockquote class="max-w-4xl {{ numberOfWords <= 75 ? 'short-story' : 'text-3xl' }}">
+                <div class="pl-10 md:pl-0 flex flex-col">
+                    <blockquote class="max-w-4xl {{ numberOfWords <= 75 ? 'short-story' : 'text-xl md:text-3xl' }}">
                         {{ product.content }}
                     </blockquote>
                     <div class="md:text-right">

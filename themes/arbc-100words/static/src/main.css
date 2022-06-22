@@ -8,6 +8,10 @@ font-family: 'DM Serif Text', serif;
 font-family: 'Inter', sans-serif;
 */
 
+main {
+  padding-top: 82px;
+}
+
 body {
   @apply text-black;
   font-family: 'Inter', sans-serif;
@@ -19,6 +23,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  main {
+    padding-top: 0;
+  }
   #navbar > * {
     min-width: 225px;
   }
@@ -279,12 +286,12 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 }
 
 .short-story {
-  @apply text-4xl;
+  @apply text-2xl md:text-4xl;
   font-family: 'DM Serif Text', serif;
 }
 
 .rotate-category {
-  @apply uppercase text-2xl absolute left-0;
+  @apply uppercase text-xl md:text-2xl absolute left-0;
   font-family: 'Inter', sans-serif;
   transform: translate(-50%, 50%) rotate(-90deg);
   top: 10em;
