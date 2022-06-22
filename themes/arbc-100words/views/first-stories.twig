@@ -1,0 +1,29 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	
+    {% for story in first_stories %}
+        {% set numberOfWords = story.content|split(' ')|length %}
+
+        <section class="snap-y snap-mandatory min-h-screen flex flex-col justify-center py-10 md:py-0 bg-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
+            <div class="arbc-container justify-center relative">
+                <div class="category-icon icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div>
+                <h2 class="pt-12 md:pt-0 rotate-category">{{ story.category }}</h2>
+            </div>
+            <div class="snap-start arbc-container justify-center relative h-full">
+                <div class="pl-10 md:pl-0 flex flex-col">
+                    <blockquote class="max-w-4xl {{ numberOfWords <= 75 ? 'short-story' : 'text-xl md:text-3xl' }}">
+                        {{ story.content }}
+                    </blockquote>
+                    <div class="md:text-right">
+                        <figcaption class="pt-12"><strong>{{ story.display_name }}</strong></figcaption>
+                        {% if story.home_campus != "do_not_attend" %}
+                            <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+
+{% endblock %}
