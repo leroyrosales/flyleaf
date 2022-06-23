@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    {% for story in first_stories %}
+    {% for story in second_stories %}
         {% set numberOfWords = story.content|split(' ')|length %}
 
         <section class="snap-y snap-mandatory min-h-screen flex flex-col justify-center py-10 md:py-0 bg-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">

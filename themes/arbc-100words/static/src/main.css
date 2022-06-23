@@ -164,7 +164,7 @@ fieldset#field_3_2 .gfield_label {
 }
 
 .one-hundred-form_wrapper .gfield_radio .gchoice {
-  flex: 1 1 auto;
+  /* flex: 1 1 auto; */
   display: flex;
   align-items: center;
   padding-right: 8px;
@@ -174,12 +174,12 @@ fieldset#field_3_2 .gfield_label {
 .one-hundred-form_wrapper #field_1_4,
 .one-hundred-form_wrapper #field_3_4 {
   @apply inline-block w-full;
-  max-width: 400px;
+  /* max-width: 400px; */
 }
 
 .one-hundred-form_wrapper #field_1_5,
 .one-hundred-form_wrapper #field_3_5 {
-  @apply mt-4 md:mt-0 md:ml-4 inline-block;
+  @apply mt-4 inline-block;
 }
 
 .one-hundred-form_wrapper #field_1_5 .gfield_label,

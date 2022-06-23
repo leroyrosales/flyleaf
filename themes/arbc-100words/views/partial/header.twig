@@ -31,7 +31,7 @@
                 <h2 class="text-yellow text-3xl pb-2">Share your Story</h2>
                 <h3 class="text-yellow text-2xl pb-2">Sort by Category</h3>
                 {% for category in categories %}
-                    <a class="text-white text-lg" href="{{ site.url }}/category/{{ category.slug }}">{{ category.name }}</a>
+                    <a class="text-white text-lg" href="{{ site.url }}/category/{{ category.slug }}"><div class="h-[13px] w-[13px] inline-block bg-no-repeat bg-contain bg-center icon-{{ category.slug | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div> {{ category.name }}</a>
                 {% endfor %}
             </div>
             <div>

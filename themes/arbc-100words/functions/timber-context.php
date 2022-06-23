@@ -20,23 +20,23 @@ add_filter( 'timber_context', function ( $context ) {
 	/******  The First Query *******/
 	$first_stories = new WP_Query( array(
 		'post_type'     => 'story',
-		'post_per_page' => 20,
-		'orderby'        => 'rand',
+		'post_per_page' => 3,
+		//'orderby'        => 'rand',
 	) );
-	
+
 	$context['first_stories'] = new Timber\PostQuery( $first_stories );
 
 	$exclude = wp_list_pluck( $first_stories->posts, 'ID' );
-	
-	/******  The Second Query *******/
-	// $second_stories = array (
-	// 	'post_type'     => 'story',
-	// 	'post__not_in'  =>  $exclude, // Tell WordPress to Exclude these posts
-	// 	'posts_per_page'  =>  20,
-	// 	'orderby'        => 'rand',
-	// );
 
-	// $context['second_stories'] = new Timber\PostQuery( $second_stories );
+	/******  The Second Query *******/
+	$second_stories = array (
+		'post_type'     => 'story',
+		'post__not_in'  =>  $exclude, // Tell WordPress to Exclude these posts
+		'posts_per_page'  =>  3,
+		//'orderby'        => 'rand',
+	);
+
+	$context['second_stories'] = new Timber\PostQuery( $second_stories );
 
 	return $context;
 
