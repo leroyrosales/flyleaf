@@ -19,6 +19,7 @@
                 "bee_cave": "Bee Cave",
                 "dripping_springs": "Dripping Springs",
                 "southwest": "Southwest",
+                "attend_virtually": "Attend Virtually",
                 "do_not_attend": "I do not attend Austin Ridge"
             },
             "allow_null": 0,
@@ -103,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1652584834
+    "modified": 1655948663
 }
