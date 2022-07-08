@@ -1,21 +1,17 @@
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
-    <script>
-      var swiper = new Swiper(".storySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        keyboard: {
-          enabled: true,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-    </script>
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper( ".storySwiper", {
+    speed: 1000,
+    slidesPerView: 1,
+    effect: 'fade',
+    keyboard: {
+      enabled: true,
+    },
+    autoplay: {
+      delay: 8000,
+    },
+  });
+</script>
