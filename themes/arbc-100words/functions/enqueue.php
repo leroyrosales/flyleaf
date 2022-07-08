@@ -37,6 +37,7 @@ add_action('admin_head', function() {
 
 function abrc_js_script() {
 
+  wp_enqueue_script( 'swiper-bundle', '//unpkg.com/swiper/swiper-bundle.min.js', array(), false, true );
   wp_enqueue_script( 'arbc-scripts', get_template_directory_uri() . '/assets/dist/main.bundle.js', array(), false, true );
 
 }

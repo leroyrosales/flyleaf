@@ -21,7 +21,7 @@ add_filter( 'timber_context', function ( $context ) {
 	$first_stories = new WP_Query( array(
 		'post_type'     => 'story',
 		'post_per_page' => 3,
-		//'orderby'        => 'rand',
+		'orderby'        => 'rand',
 	) );
 
 	$context['first_stories'] = new Timber\PostQuery( $first_stories );
@@ -33,7 +33,7 @@ add_filter( 'timber_context', function ( $context ) {
 		'post_type'     => 'story',
 		'post__not_in'  =>  $exclude, // Tell WordPress to Exclude these posts
 		'posts_per_page'  =>  3,
-		//'orderby'        => 'rand',
+		'orderby'        => 'rand',
 	);
 
 	$context['second_stories'] = new Timber\PostQuery( $second_stories );
