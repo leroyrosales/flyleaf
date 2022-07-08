@@ -46,7 +46,7 @@ function arbc_faiths_cpt() {
             ),
             'rewrite' => true,
             'hierarchical' => false,
-            'public' => true,
+            'public' => false,
             'publicly_queryable' => true,
             'show_ui' => true,
             'menu_position' => 15,
@@ -63,6 +63,29 @@ function arbc_faiths_cpt() {
 
 }
 add_action( 'init', 'arbc_faiths_cpt' );
+
+
+function Arbc_Story_Published_notification( $post_id ) {
+
+    $email = get_post_meta($post_id, 'email');
+    $name = get_post_meta($post_id, 'display_name')[0];
+    $subject =  $name . ", your story has been published!";
+
+    $message = "
+        Hi ".$name.",
+
+        Your story, has just been published.
+
+        See it at: " . get_site_url() . "
+
+        Thanks!"
+    ;
+
+    wp_mail($email, $subject, $message);
+
+};
+add_action('publish_story', 'Arbc_Story_Published_notification', 10, 2);
+
 
 // add_action( 'init', function () {
 
