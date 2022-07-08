@@ -46,7 +46,7 @@ function arbc_faiths_cpt() {
             ),
             'rewrite' => true,
             'hierarchical' => false,
-            'public' => false,
+            'public' => true,
             'publicly_queryable' => true,
             'show_ui' => true,
             'menu_position' => 15,
