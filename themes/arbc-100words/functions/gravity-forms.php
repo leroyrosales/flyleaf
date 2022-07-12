@@ -34,7 +34,7 @@ function arbc_custom_confirmation( $confirmation, $form, $entry, $ajax ) {
 	<h2 class="text-4xl">Thank you for sharing your story!</h2>
 	<p><em>Your story will be posted after our review.</em></p>
 	<div class="flex flex-row justify-between pt-12 items-center">
-		<a href="/" class="text-black share-more-stories uppercase">Share another story</a> <span class="pen-nav-item"><a href="/stories" class="text-black uppercase">View Stories</a></span>
+		<a href="' . get_site_url() . '" class="text-black share-more-stories uppercase">Share another story</a> <span class="pen-nav-item"><a href="' . get_site_url() . '/stories" class="text-black uppercase">View Stories</a></span>
 	</div></section>';
 
 	return $confirmation;
