@@ -1,7 +1,8 @@
 jQuery(function($){
+
 	var canBeLoaded = true, // this param allows to initiate the AJAX call only if necessary
 	    bottomOffset = 2000; // the distance (in px) from the page bottom when you want to load more posts
- 
+
 	$(window).scroll(function(){
 		var data = {
 			'action': 'loadmore',
@@ -16,7 +17,7 @@ jQuery(function($){
 				beforeSend: function( xhr ){
 					// you can also add your own preloader here
 					// you see, the AJAX call is in process, we shouldn't run it again until complete
-					canBeLoaded = false; 
+					canBeLoaded = false;
 				},
 				success:function(data){
 					if( data ) {

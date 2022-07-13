@@ -18,8 +18,17 @@ $context          = Timber::context();
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
-$context['news'] = new Timber\PostQuery();
+// Stories category context
+$args = array(
+    // 'cat' => array(
+    //     $cat_id,
+    // ),
+    // 'posts_per_page' => -1,
+    'post_type' => 'story',
+);
 
-$templates        = array( 'index.twig' );
+$context['products'] = new Timber\PostQuery( $args );
+
+$templates        = array( 'page-stories.twig' );
 
 Timber::render( $templates, $context );

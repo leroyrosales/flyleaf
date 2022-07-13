@@ -2,9 +2,9 @@
 
 {% block content %}
 
-{% for story in story_category %}
 
-     {% for product in story.products|slice(0,1) %}
+
+     {% for product in products %}
 
         {% set numberOfWords = product.content|split(' ')|length %}
 
@@ -29,6 +29,5 @@
         </section>
     {% endfor %}
 
-{% endfor %}
 
 {% endblock %}
