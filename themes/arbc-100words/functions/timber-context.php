@@ -38,6 +38,10 @@ add_filter( 'timber_context', function ( $context ) {
 
 	$context['second_stories'] = new Timber\PostQuery( $second_stories );
 
+	$context['first_stories_page'] = is_page_template( 'page-first-stories.php' );
+
+	$context['second_stories_page'] = is_page_template( 'page-second-stories.php' );
+
 	return $context;
 
 } );
