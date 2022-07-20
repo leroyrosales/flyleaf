@@ -1,10 +1,10 @@
 <header class="w-full z-10 py-4 bg-black absolute md:pt-8 md:bg-transparent">
     <section>
-        {% if not first_stories_page %}
+        {% if first_stories_page %}
             <div class="arbc-container justify-center items-center md:items-top" id="navbar">
                 <h1 class="text-xl md:text-3xl text-center"><a class="text-white md:text-black" href="{{ site.url }}/stories">{{ site.name }}</a></h1>
             </div>
-        {% else  %}
+        {% else %}
             <div class="arbc-container justify-between items-center md:items-top" id="navbar">
                 <a href="{{ site.url }}"><img class="md:hidden h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo-white.svg" alt="Austin Ridge Bible Church logo"><img class="hidden md:block h-8 w-auto" src="{{ site.theme.link }}/assets/images/logos/logo.svg" alt="Austin Ridge Bible Church logo"></a>
                 <h1 class="text-xl md:text-3xl text-center"><a class="text-white md:text-black" href="{{ site.url }}/stories">{{ site.name }}</a></h1>
