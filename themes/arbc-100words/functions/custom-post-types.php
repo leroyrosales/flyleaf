@@ -74,7 +74,7 @@ function Arbc_Story_Published_notification( $post_id ) {
     $message = "
         Hi ".$name.",
 
-        Your story, has just been published.
+        Your 100-Word Story, has just been published.
 
         See it at: " . get_site_url() . "
 
