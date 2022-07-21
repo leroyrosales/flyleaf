@@ -69,16 +69,18 @@ function arbc_story_published_notification( $post_id ) {
 
 	$email   = get_post_meta( $post_id, 'email' );
 	$name    = get_post_meta( $post_id, 'display_name' )[0];
-	$subject = $name . ', your story has been published!';
+	$subject = get_field( 'subject', 'option' ) ?: $name . ', your story has been published!';
 
-	$message = '
-		Hi "' . $name . '",
+	$default_message = '
+		Hi ' . $name . ',
 
 		Your 100-Word Story, has just been published.
 
-		See it at: " . get_site_url() . "
+		See it at: ' . get_site_url() . '
 
 		Thanks!';
+
+	$message = get_field( 'message', 'option' ) ?: $default_message;
 
 	wp_mail( $email, $subject, $message );
 
