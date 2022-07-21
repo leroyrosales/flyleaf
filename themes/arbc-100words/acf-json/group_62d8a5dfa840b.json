@@ -19,6 +19,25 @@
             "endpoint": 0
         },
         {
+            "key": "field_62d8ac6b3be6b",
+            "label": "Subject",
+            "name": "subject",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_62d8a75b241fc",
             "label": "Message",
             "name": "message",
@@ -59,15 +78,15 @@
             "name": "slider_duration",
             "type": "text",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
+            "default_value": 3500,
+            "placeholder": 3500,
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -91,5 +110,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1658365820
+    "modified": 1658367093
 }

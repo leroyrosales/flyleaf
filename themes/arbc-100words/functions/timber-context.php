@@ -11,6 +11,9 @@ add_filter( 'timber_context', function ( $context ) {
 	// Social Accounts
 	$context['social_media_accounts'] = get_field( 'social_media_accounts', 'option' );
 
+	// Slider timer
+	$context['slider_duration'] = get_field( 'slider_duration', 'option' );
+
 	// Is front page of site
 	$context['is_front_page'] = is_front_page();
 
