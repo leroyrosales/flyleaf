@@ -321,8 +321,9 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 .rotate-category {
   @apply uppercase text-xl md:text-2xl 3xl:text-3xl absolute left-0;
   font-family: 'Inter', sans-serif;
-  transform: translate(-50%, 50%) rotate(-90deg);
-  top: 10em;
+  /* transform: translate(-50%, 50%) rotate(-90deg); */
+  /* top: 10em; */
+  transform: rotate(-90deg)
 }
 
 .one-hundred-form_wrapper .gfield_description.gfield_validation_message {

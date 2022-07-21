@@ -483,6 +483,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative {
   position: relative;
 }
+.top-0 {
+  top: 0px;
+}
+.left-0 {
+  left: 0px;
+}
+.top-2 {
+  top: 0.5rem;
+}
+.top-20 {
+  top: 5rem;
+}
+.top-40 {
+  top: 10rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -546,6 +561,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-\[13px\] {
   height: 13px;
+}
+.h-10 {
+  height: 2.5rem;
+}
+.h-20 {
+  height: 5rem;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -1368,8 +1389,9 @@ body #gform_wrapper_1 #field_submit INPUT[type=submit], body #gform_wrapper_3 #f
 
 .rotate-category {
   font-family: 'Inter', sans-serif;
-  transform: translate(-50%, 50%) rotate(-90deg);
-  top: 10em;
+  /* transform: translate(-50%, 50%) rotate(-90deg); */
+  /* top: 10em; */
+  transform: rotate(-90deg)
 }
 
 .one-hundred-form_wrapper .gfield_description.gfield_validation_message {
