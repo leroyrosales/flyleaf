@@ -321,8 +321,20 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 .rotate-category {
   @apply uppercase text-xl md:text-2xl 3xl:text-3xl absolute left-0;
   font-family: 'Inter', sans-serif;
+  transform: translate(-50%, 50%) rotate(-90deg);
+  /* top: 10em; */
+  /* top: 12rem; */
+  /* transform: rotate(-90deg) */
+  left: 10%;
+  top: 50%;
+}
+
+.rotate-category-stories {
+  @apply uppercase text-xl md:text-2xl 3xl:text-3xl absolute left-0;
+  font-family: 'Inter', sans-serif;
   /* transform: translate(-50%, 50%) rotate(-90deg); */
   /* top: 10em; */
+  /* top: 12rem; */
   transform: rotate(-90deg)
 }
 

@@ -483,18 +483,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative {
   position: relative;
 }
-.top-0 {
-  top: 0px;
-}
-.left-0 {
-  left: 0px;
-}
-.top-2 {
-  top: 0.5rem;
-}
-.top-20 {
-  top: 5rem;
-}
 .top-40 {
   top: 10rem;
 }
@@ -556,17 +544,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-full {
   height: 100%;
 }
+.h-20 {
+  height: 5rem;
+}
 .h-8 {
   height: 2rem;
 }
 .h-\[13px\] {
   height: 13px;
-}
-.h-10 {
-  height: 2.5rem;
-}
-.h-20 {
-  height: 5rem;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -1389,8 +1374,43 @@ body #gform_wrapper_1 #field_submit INPUT[type=submit], body #gform_wrapper_3 #f
 
 .rotate-category {
   font-family: 'Inter', sans-serif;
+  transform: translate(-50%, 50%) rotate(-90deg);
+  /* top: 10em; */
+  /* top: 12rem; */
+  /* transform: rotate(-90deg) */
+  left: 10%;
+  top: 50%;
+}
+
+.rotate-category-stories {
+  position: absolute;
+  left: 0px;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+  .rotate-category-stories {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .rotate-category-stories {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.rotate-category-stories {
+  font-family: 'Inter', sans-serif;
   /* transform: translate(-50%, 50%) rotate(-90deg); */
   /* top: 10em; */
+  /* top: 12rem; */
   transform: rotate(-90deg)
 }
 

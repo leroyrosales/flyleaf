@@ -11,7 +11,7 @@
                     <div class="arbc-container justify-center h-20">
                         <div class="absolute top-40 category-icon icon-{{ story.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div>
                     </div>
-                    <h2 class="pt-12 md:pt-0 rotate-category">{{ story.category }}</h2>
+                    <h2 class="pt-12 md:pt-0 rotate-category-stories">{{ story.category }}</h2>
                     <div class="snap-start arbc-container justify-center relative h-full">
                         <div class="pl-10 md:pl-0 flex flex-col text-left">
                             <blockquote class="max-w-4xl 3xl:max-w-6xl {{ numberOfWords <= 75 ? 'short-story' : 'text-xl md:text-3xl 3xl:text-4xl' }}">

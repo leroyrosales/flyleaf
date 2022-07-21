@@ -8,7 +8,7 @@
 
         {% set numberOfWords = product.content|split(' ')|length %}
 
-        <section class="snap-y snap-mandatory min-h-screen flex flex-col justify-center py-10 md:py-0 bg-{{ product.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
+        <section class="relative snap-y snap-mandatory min-h-screen flex flex-col justify-center py-10 md:py-0 bg-{{ product.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}">
             <h2 class="pt-12 md:pt-0 rotate-category">{{ product.category }}</h2>
             <div class="arbc-container justify-center relative">
                 <div class="category-icon icon-{{ product.category | lower | replace({ ' ': '-', '&amp;' : 'and' }) }}" role="presentation"></div>

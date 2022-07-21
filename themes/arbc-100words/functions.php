@@ -235,14 +235,14 @@ function misha_loadmore_ajax_handler(){
             // get_template_part( 'template-parts/post/content', get_post_format() );
             // for the test purposes comment the line above and uncomment the below one
             // the_title();
-            echo '<section class="snap-y snap-mandatory min-h-screen flex flex-col justify-center py-10 md:py-0 bg-' . get_the_category()[0]->slug . '">
+            echo '<section class="relative snap-y snap-mandatory min-h-screen flex flex-col justify-center py-10 md:py-0 bg-' . get_the_category()[0]->slug . '">
+            <h2 class="pt-12 md:pt-0 rotate-category">' . get_the_category()[0]->name . '</h2>
             <div class="arbc-container justify-center relative">
                 <div class="category-icon icon-' . get_the_category()[0]->slug . '" role="presentation"></div>
-                <h2 class="pt-12 md:pt-0 rotate-category">' . get_the_category()[0]->name . '</h2>
             </div>
             <div class="snap-start arbc-container justify-center relative h-full">
                 <div class="pl-10 md:pl-0 flex flex-col">
-                    <blockquote class="max-w-4xl '; 
+                    <blockquote class="max-w-4xl ';
                     echo $numberOfWords <= 75 ? 'short-story' : 'text-xl md:text-3xl';
                     echo '">
                         ' . get_the_content() . '
