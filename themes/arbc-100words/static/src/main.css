@@ -254,7 +254,7 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 
 /* icons */
 .category-icon {
-  @apply text-center mb-8 pb-8 bg-no-repeat bg-contain bg-center w-[26px] h-[26px];
+  @apply text-center mb-8 pb-8 bg-no-repeat bg-contain bg-center w-[26px] h-[26px] 3xl:w-[32px] 3xl:h-[32px];
 }
 
 .icon-praise-and-thanksgiving {
@@ -314,12 +314,12 @@ body #gform_wrapper_3 #field_submit INPUT[type=submit] {
 }
 
 .short-story {
-  @apply text-2xl md:text-4xl;
+  @apply text-2xl md:text-4xl 3xl:text-5xl;
   font-family: 'DM Serif Text', serif;
 }
 
 .rotate-category {
-  @apply uppercase text-xl md:text-2xl absolute left-0;
+  @apply uppercase text-xl md:text-2xl 3xl:text-3xl absolute left-0;
   font-family: 'Inter', sans-serif;
   transform: translate(-50%, 50%) rotate(-90deg);
   top: 10em;

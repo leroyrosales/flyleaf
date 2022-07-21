@@ -17,6 +17,9 @@ module.exports = {
           cream: '#F1EFDB',
           blue: '#D1EBEF',
           yellow: '#FEF1C0',
+        },
+        screens: {
+          '3xl': '1920px'
         }
       },
     },
