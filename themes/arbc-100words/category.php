@@ -14,7 +14,7 @@
  * @since   Timber 0.2
  */
 
-$templates = array( 'category.twig' );
+$templates = array( 'page-stories.twig' );
 
 $context = Timber::context();
 
@@ -30,6 +30,6 @@ $args = array(
     'post_type' => 'story',
 );
 
-$context['stories'] = new Timber\PostQuery( $args );
+$context['products'] = new Timber\PostQuery( $args );
 
 Timber::render( $templates, $context );
