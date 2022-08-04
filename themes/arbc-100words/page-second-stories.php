@@ -6,4 +6,4 @@ $context = Timber::context();
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
-Timber::render( 'stories.twig', $context );
+Timber::render( 'second-stories.twig', $context );

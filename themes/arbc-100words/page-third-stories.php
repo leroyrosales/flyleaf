@@ -1,9 +1,9 @@
 <?php
 
-/* Template Name: Second Stories */
+/* Template Name: Third Stories */
 
 $context = Timber::context();
 $timber_post     = new Timber\Post();
 $context['post'] = $timber_post;
 
-Timber::render( 'stories.twig', $context );
+Timber::render( 'third-stories.twig', $context );
