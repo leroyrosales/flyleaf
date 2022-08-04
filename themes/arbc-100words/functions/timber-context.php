@@ -24,35 +24,35 @@ add_filter( 'timber_context', function ( $context ) {
 	$first_stories = new WP_Query( array(
 		'post_type'     => 'story',
 		'post_per_page' => 10,
-		'orderby'        => 'rand',
+		'orderby'       => 'rand',
 	) );
 
 	$context['first_stories'] = new Timber\PostQuery( $first_stories );
 
-	$exclude = wp_list_pluck( $first_stories->posts, 'ID' );
+	$exclude = wp_list_pluck( $first_stories, 'ID' );
 
 	/******  The Second Query *******/
-	$second_stories = array (
-		'post_type'     => 'story',
-		'post__not_in'  =>  $exclude, // Tell WordPress to Exclude these posts
-		'posts_per_page'  =>  10,
+	$second_stories = new WP_Query( array(
+		'post_type'      => 'story',
+		'post__not_in'   => $exclude, // Tell WordPress to Exclude these posts
+		'posts_per_page' => 10,
 		'orderby'        => 'rand',
-	);
+	) );
 
 	$context['second_stories'] = new Timber\PostQuery( $second_stories );
 
-	$exclude_more = wp_list_pluck( array(
-		$first_stories->posts, 'ID',
-		$second_stories->posts, 'ID'
-	) );
+	$combined_stories = new WP_Query();
+	$combined_stories->posts = array_merge( $first_stories->posts, $second_stories->posts );
+
+	$exclude_more = wp_list_pluck( $combined_stories->posts, 'ID' );
 
 	/******  The Second Query *******/
-	$third_stories = array (
-		'post_type'     => 'story',
-		'post__not_in'  =>  $exclude_more, // Tell WordPress to Exclude these posts
-		'posts_per_page'  =>  10,
+	$third_stories = new WP_Query( array(
+		'post_type'      => 'story',
+		'post__not_in'   => $exclude_more, // Tell WordPress to Exclude these posts
+		'posts_per_page' => 10,
 		'orderby'        => 'rand',
-	);
+	) );
 
 	$context['third_stories'] = new Timber\PostQuery( $third_stories );
 
