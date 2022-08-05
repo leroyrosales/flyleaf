@@ -70,6 +70,7 @@ function arbc_story_published_notification( $post_id ) {
 	$email   = get_post_meta( $post_id, 'email' );
 	$name    = get_post_meta( $post_id, 'display_name' )[0];
 	$subject = get_field( 'subject', 'option' ) ?: $name . ', your story has been published!';
+	$headers = array( 'Content-Type: text/html; charset=UTF-8' );
 
 	$default_message = '
 		Hi ' . $name . ',
@@ -82,7 +83,7 @@ function arbc_story_published_notification( $post_id ) {
 
 	$message = get_field( 'message', 'option' ) ?: $default_message;
 
-	wp_mail( $email, $subject, $message );
+	wp_mail( $email, $subject, $message, $headers );
 
 };
 add_action( 'publish_story', 'arbc_story_published_notification', 10, 2 );
