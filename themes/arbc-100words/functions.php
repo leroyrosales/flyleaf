@@ -241,7 +241,7 @@ function misha_loadmore_ajax_handler(){
                 <div class="category-icon icon-' . get_the_category()[0]->slug . '" role="presentation"></div>
             </div>
             <div class="snap-start arbc-container justify-center relative h-full">
-                <div class="pl-10 md:pl-0 flex flex-col">
+                <div class="pl-10 lg:pl-0 flex flex-col">
                     <blockquote class="max-w-4xl ';
                     echo $numberOfWords <= 75 ? 'short-story' : 'text-xl md:text-3xl';
                     echo '">
