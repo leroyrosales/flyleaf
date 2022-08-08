@@ -20,10 +20,8 @@
                     </blockquote>
                     <div class="md:text-right">
                         <figcaption class="pt-12"><strong>{{ product.display_name }}</strong></figcaption>
-                        {% if product.home_campus != "do_not_attend" and product.home_campus !='attend_virtually' %}
+                        {% if product.home_campus != "do_not_attend" or product.home_campus !='attend_virtually' %}
                             <span>{{ product.home_campus | upper | replace({ '_' : ' ' }) }}</span>
-                        {% elseif product.home_campus == "attend_virtually" %}
-                            <span>Virtually</span>
                         {% endif %}
                     </div>
                 </div>

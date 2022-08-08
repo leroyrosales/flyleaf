@@ -19,10 +19,8 @@
                             </blockquote>
                             <div class="md:text-right 3xl:text-xl">
                                 <figcaption class="pt-12"><strong>{{ story.display_name }}</strong></figcaption>
-                                {% if story.home_campus != "do_not_attend" and story.home_campus !='attend_virtually' %}
+                                {% if story.home_campus != "do_not_attend" or story.home_campus !='attend_virtually' %}
                                     <span>{{ story.home_campus | upper | replace({ '_' : ' ' }) }}</span>
-                                {% elseif story.home_campus == "attend_virtually" %}
-                                    <span>Virtually</span>
                                 {% endif %}
                             </div>
                         </div>
