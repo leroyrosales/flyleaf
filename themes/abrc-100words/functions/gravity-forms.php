@@ -50,3 +50,9 @@ function arbc_custom_name_validation( $result, $value, $form, $field ) {
 	return $result;
 
 }
+
+// Placing this for future use
+
+// <h2>Thank you for sharing your story!</h2>
+// <em>Your story will be posted after our review, and you will receive an email confirmation once it is live. This is to confirm this is the right confirmation.</em>
+// <div class="flex flex-row justify-between pt-12 items-center"><a href="https://100wordstories.org/" class="text-black share-more-stories uppercase">Share another story</a> <span class="pen-nav-item"><a href="https://100wordstories.org//stories" class="text-black uppercase">View Stories</a></span></div>
