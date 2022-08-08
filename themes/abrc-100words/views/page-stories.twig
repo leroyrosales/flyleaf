@@ -19,8 +19,12 @@
                         {{ product.content }}
                     </blockquote>
                     <div class="md:text-right">
-                        <figcaption class="pt-12"><strong>{{ product.display_name }}</strong></figcaption>
-                        {% if product.home_campus != "do_not_attend" or product.home_campus !='attend_virtually' %}
+                        {% if product.remain_anonymous == true %}
+                            <figcaption class="pt-12"><strong>Anonymous</strong></figcaption>
+                        {% else %}
+                            <figcaption class="pt-12"><strong>{{ product.display_name }}</strong></figcaption>
+                        {% endif %}
+                        {% if product.home_campus != "do_not_attend" and product.home_campus !='attend_virtually' %}
                             <span>{{ product.home_campus | upper | replace({ '_' : ' ' }) }}</span>
                         {% endif %}
                     </div>

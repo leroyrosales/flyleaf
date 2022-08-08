@@ -244,8 +244,12 @@ function misha_loadmore_ajax_handler(){
 					</blockquote>
 					<div class="md:text-right">
 						<figcaption class="pt-12"><strong>' . get_field( 'display_name' ) . '</strong></figcaption>';
-						if ( ! get_field( 'home_campus' ) === 'do_not_attend' || ! get_field( 'home_campus' ) === 'attend_virtually' ) :
-							echo '<span>' . get_field( 'home_campus' ) . '</span>';
+						if ( get_field( 'home_campus' ) === 'do_not_attend' ) :
+							echo '';
+						elseif ( get_field( 'home_campus' ) === 'attend_virtually' ) :
+							echo '';
+						else :
+							echo '<span>' . strtoupper( str_replace( '_', ' ', get_field( 'home_campus' ) ) ) . '</span>';
 						endif;
 					echo '
 					</div>
